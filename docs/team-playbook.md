@@ -8,7 +8,9 @@ An agent team works best with a lead and **three to five active teammates** at o
 
 ## Before you start: answer the blocking questions
 
-Open `marketing/flags.md` and answer what you can under **Blocking**, especially the launch date, budget range and the "Get started free" link. Every answer removes placeholders from every draft.
+Open `marketing/flags.md` and answer what you can under **Blocking**, especially the launch date, budget range and sign-off. Then work through the brief's **Open questions** in `docs/embed-brief.md`: answer each one by moving the answer into the brief. Every answer removes placeholders from every draft.
+
+**When you update the brief:** edit `docs/embed-brief.md` (only humans change it) and commit. Teammates read it fresh each time they start, so the next phase picks up the change.
 
 ---
 

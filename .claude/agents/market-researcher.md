@@ -26,6 +26,10 @@ Save each topic as its own file in `marketing/research/`.
 6. **`calendar.md`: timing.** Industry events, conferences, awareness days and seasonal moments relevant to the audiences and use cases, plus dates to avoid, for example bank holidays or major tech launches that would bury news.
 7. **Ad hoc questions** from teammates. Answer in a file named for the question and tell the teammate where it is.
 
+Don't list the AI Community of Practice (learnt.ai/join-the-community) as a launch channel. Aidan facilitates it, and the brief says it must never be used to sell Embed.
+
+Target organisation size and sectors are still an open question in the brief. Where it helps the strategist decide, research which publications and communities reach each of the six use-case sectors, so that choice can be made on evidence.
+
 ## How to record facts
 
 - Give every fact a source link and the date you checked it, in the form `(source: URL, checked YYYY-MM-DD)`.

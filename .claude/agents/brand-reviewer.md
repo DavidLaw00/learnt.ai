@@ -39,7 +39,17 @@ Check every line against these, in order:
 8. **Rule 3: draft only.** Nothing in the plan has the team itself sending, posting, buying or signing up; those actions are assigned to `[HUMAN]`.
 9. **Audience and framing.** Leads with performance and risk, not training. Fits the audience in the header. Not aimed at Create customers.
 10. **Voice.** British English (organisation, programme, practise as a verb, licence as a noun). Short sentences. No exclamation marks, emoji or hype, on any channel. "You" and "your people", not "learners" or "users" outside pricing. None of the words to avoid. "AI-powered" never as a headline.
-11. **Placeholders.** Every gap is marked `[HUMAN: ...]` or `[VERIFY: ...]` and is listed in `marketing/flags.md`. No gap has been filled with plausible-sounding detail.
+11. **Open questions.** Nothing from the brief's "Open questions" section is used or implied: no VAT statement, no claim that the free 25 applies to monthly payment, no delivery channel or integration, no customers, no target sector in copy, no description of the walkthrough film, no invented social handles, no tool library closure.
+12. **Names, links and calls to action.** The first mention is "Embed by Learnt.ai" where both are needed. "Learnt.ai" and "Embed" are spelt correctly. Create is never promoted. Every link is in the brief's tables. "Get started free" comes first and "Book a demo" is never the main action.
+13. **Vision, story and fears.**
+    - Story numbers are exact ("a combined 35+ years in people development", "110 AI tools", "more than 34,000 users"), and the 35+ years aren't split.
+    - Only employers from the founders table are named.
+    - No "passionate" or "authentic".
+    - Every fear is answered with a hope and an action, and no piece ends on fear.
+    - No job-loss predictions, AI statistics or forecasts, and never "AI will replace people".
+    - The AI Community of Practice is never used to sell.
+    - The vision leads only where the brief allows: About, founder posts, press and long-form openings. Product and use-case pages lead with outcomes.
+14. **Placeholders.** Every gap is marked `[HUMAN: ...]` or `[VERIFY: ...]` and is listed in `marketing/flags.md`. No gap has been filled with plausible-sounding detail.
 
 ## Your report
 

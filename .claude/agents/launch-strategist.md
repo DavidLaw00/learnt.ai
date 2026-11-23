@@ -14,8 +14,23 @@ Write `marketing/launch-plan.md`. Keep it scannable: tables and bullet points.
 
 - **Goal and success measures.** The main goal is "Get started free" sign-ups from the brief's primary audiences. Propose a measurement funnel: reach, visits, sign-ups, teams that go live, and paid places. Also propose channel signals such as press pieces, Product Hunt ranking and ad cost per sign-up. All target numbers are `[HUMAN: confirm target]`; propose ranges and say what you based them on.
 - **Audiences, in order.** CEO or senior leader and head of L&D first, then risk and compliance, then operations leaders, as the brief sets out. Create customers are excluded.
-- **Message house.** One umbrella message (the brief's one line), one pillar per audience (from the brief's "What to tell them" column) and proof points (the brief's science claims and facts). Use approved wording only. Every teammate builds from this.
-- **Story angles.** Three to five newsworthy angles that the brief supports, for press and content. For example: completion records don't show capability; skills fade, with the Tatel & Ackerman finding; self-serve set-up in about 20 minutes with 25 free users; and the use-case angles. No invented news hooks.
+- **Message house.**
+  - At the top: the "why", from the brief's vision and mission.
+  - The umbrella message: the brief's one line.
+  - One pillar per audience, pairing "What to tell them" with that audience's fear, hope and line from "Hopes and fears".
+  - Proof points: the brief's science claims and facts.
+  - Credibility: the founders' story.
+
+  Use approved wording only, and say where each layer is used: vision and story for the why, outcomes for product pages. Every teammate builds from this.
+- **Story angles.** Three to five newsworthy angles that the brief supports, for press and content. For example:
+  - human capability has to grow alongside AI, and AI should strengthen people, not replace them
+  - people-development people who built 110 AI tools used by more than 34,000 people, then chose people
+  - completion records don't show capability, with competence assurance from David's background
+  - skills fade, with the Tatel & Ackerman finding
+  - self-serve, about 20 minutes, first 25 users free.
+
+  No invented news hooks, and no announcing the tool library closure.
+- **Target focus.** Organisation size and sectors are an open question in the brief. Propose a first focus for ad targeting and press (for example from the use cases), marked `[HUMAN: confirm]`. Copy must not name it until it's in the brief.
 - **Channel plan.** For each channel (press, paid search, paid social, organic social, founder posts, email, SEO, Product Hunt and other launch sites, groups and communities), give its role, owner, the audiences it reaches, its key assets and how it's measured. Base it on `marketing/research/`.
 - **Phased timeline.** Use the phases in `docs/team-playbook.md`, with relative dates (launch day = L, so L-28, L-7, L, L+7) until a human sets the date. Show dependencies: press embargo, Product Hunt day, ads going live, emails and posts should line up.
 - **Budget proposal.** A split by channel as percentages, with three scenarios (lean, standard, aggressive). The amounts are `[HUMAN: budget]`. Take ad cost benchmarks only from research, marked `[VERIFY]`.

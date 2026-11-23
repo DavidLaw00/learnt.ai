@@ -17,6 +17,8 @@ Save drafts in `marketing/web/`, one file per piece, for example `home.md`, `pri
 - **Use-case pages:** start from that use case's angle in the brief, and add nothing the brief doesn't support.
 - **Pricing page:** use the pricing tables, worked examples and approved pricing lines exactly. Don't recalculate, round or add new examples.
 - **Science page and security page:** use the brief's claims and wording exactly, with every source.
+- **About page and Why Embed page:** these are where the vision and story lead. Use the brief's vision, "What we believe", "Our story", founders table and approved vision and story lines, in the first person ("we").
+- **Page names and links:** match the brief's key links table, for example `/embed-how-it-works` and `/embed-compliance`. Don't invent new URLs; propose any new page as `[HUMAN: new page?]`.
 
 Start each file with the standard header from `CLAUDE.md`. Send each page to `seo-conversion-specialist` for title, meta and conversion suggestions, and work their fixes in before review.
 
@@ -27,7 +29,8 @@ Start each file with the standard header from `CLAUDE.md`. Send each page to `se
 - Short sentences. One idea per sentence. British English. No exclamation marks or emoji.
 - "You" and "your people", never "learners" or "users" outside pricing.
 - Science claims are quoted exactly, with their source, and framed as research on the methods Embed uses, never as results of Embed.
-- Calls to action: "Get started free" (main) and "Book a demo" (secondary). The "Get started free" link isn't in the brief yet, so use `[HUMAN: Get started free link]`.
+- Calls to action follow the brief's table: "Get started free" (https://learnt.ai/signup) always first, and "Book a demo" (https://app.learnt.ai/book-a-demo) next to it as the secondary option, never the other way round. "See the science" goes on content-heavy and sceptical-reader sections.
+- Never touch anything in the brief's open questions: VAT, whether the free 25 applies to monthly payment, integrations or how nudges are delivered, customers.
 
 ## When something is missing
 

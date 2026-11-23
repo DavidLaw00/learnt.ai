@@ -50,14 +50,27 @@ These apply to every channel, and the brand reviewer enforces them.
 
 Search for both before anything goes live.
 
-## Known gaps in the brief
+## Open questions and known gaps
 
-Don't fill these: use `[HUMAN: ...]` placeholders. The full list is in `marketing/flags.md`.
+**The brief's "Open questions" section is off limits.** Nothing listed there may be used, implied or worked around until a human answers it and moves the answer into the brief. The ones most likely to catch you out:
 
-- The "Get started free" link, and when to use each call to action.
-- The brief's "open questions" section, which isn't included yet.
-- Integrations: unconfirmed, so never claim any.
-- Launch date, budget, KPI targets, spokespeople, founder names and quotes, and brand assets (logo, screenshots, demo video).
+- **VAT.** Never say whether prices include VAT.
+- **Monthly payment and the free 25.** Don't say whether the first 25 places are free when paying monthly. Say "First 25 users free" only in the brief's own wording.
+- **Integrations, and how people receive nudges.** Don't name email, Slack, Teams, an app or any LMS or HR system as a delivery route or integration.
+- **Customer proof.** None exists.
+- **Target size and sectors.** Not set. Plans may propose a focus, marked `[HUMAN: confirm]`, but copy must not name one.
+- **Walkthrough film.** Don't describe its length or content.
+- **Social handles.** Use `[HUMAN: official handle]`.
+- **Sign-off.** Who approves agent-written content isn't decided. Every draft ends as `ready for human`.
+- **The tool library closure.** Never announce it or give a date. Say "we've put our focus on Embed".
+- **Founders' LinkedIn profiles.** They are out of date, and Aidan's says "free" and "around 30 minutes". Don't quote or link to them as a source. Any plan that sends people to the founders' profiles (founder posts, Product Hunt maker profiles, press bios) must flag that the profiles should be updated first.
+
+**Not in the brief at all.** Use `[HUMAN: ...]`. The full list is in `marketing/flags.md`.
+
+- Launch date, budget, KPI targets and target markets.
+- Quotes from David Law or Aidan Brooks. The team may draft a suggested quote from the brief's approved lines, clearly labelled "draft quote for approval".
+- Brand assets: logo, colours, fonts and screenshots.
+- A media contact other than hello@learnt.ai, if one is wanted.
 
 ## The team
 
@@ -101,11 +114,17 @@ Shared files:
 
 ## House style, in short
 
-The brief's "Voice and style" and "Guardrails" sections are the full rules. The ones most often missed:
+The brief's "Vision", "Our story", "Hopes and fears", "Voice and style", "Guardrails" and "Names, links and company details" sections are the full rules. The ones most often missed:
 
+- **Names.** Write "Embed by Learnt.ai" on first mention where both are needed. Learnt.ai has a capital L and a lower-case ".ai". Embed has a capital E. Never promote Create.
+- **Calls to action.** "Get started free" (https://learnt.ai/signup) always comes first. "Book a demo" is only ever the secondary option. Use only links from the brief's tables.
+- **Vision and story.** Use them for the why (About, founder posts, press, launch sites, openings of long pieces), not on product or use-case pages. Story numbers are exact: "a combined 35+ years in people development", "110 AI tools", "more than 34,000 users". Don't split the 35+ years between the founders. The only past employers that may be named are those in the brief's founders table. Never use the words "passionate" or "authentic".
+- **AI fears.** Name a fear only to answer it with a hope and an action, and never end on fear. No job-loss predictions, no AI statistics or forecasts, never "AI will replace people".
+- **The AI Community of Practice.** Mention it only to show Learnt.ai is part of the conversation (learnt.ai/join-the-community). Never use it, or any post in it, to sell or launch Embed.
+- **Personal details.** Founders' personal phone numbers or emails are never used. Use hello@learnt.ai.
 - British English. No exclamation marks, no emoji, no hype, including in ads and on launch sites.
 - "You" and "your people", never "learners" or "users" outside pricing.
-- Lead with performance and risk, not training.
+- Lead with human capability, performance and proof. AI sets the stakes; Embed is how people keep up. Not training.
 - Embed is "capability reinforcement and assurance", never an LMS, course library or e-learning platform.
 - Never say Embed is "proven", never give an Embed result as a percentage, never invent customers, quotes, testimonials or results.
 - Certifications belong to Bubble, AWS, OpenAI and OpenRouter, not Learnt.ai. Hosting is in the US.

@@ -17,11 +17,13 @@ Save drafts in `marketing/content/`, one file per piece.
 - **Email sequences:**
   - pre-launch, to any existing list `[HUMAN: is there a list, and consent to email it?]`
   - the launch announcement
-  - onboarding nudges after sign-up (add users, generate content, assign, go live).
+  - onboarding nudges after sign-up (add users, generate content, assign, go live). Don't describe how Embed delivers nudges to people; that's an open question in the brief.
 
   Give each email a subject line, a preview line, a body of under 150 words, one call to action, and UTM tags from `marketing/seo/tracking-plan.md`.
-- **Bylined articles:** full drafts of the proposals in `marketing/press/bylines.md` once `pr-manager` says which are wanted. Write them as useful thought leadership for the publication's readers, not adverts: mention Embed once, at most, in the author bio line. The author is `[HUMAN: founder name and title]`.
-- **Launch newsletter or LinkedIn article:** the founder's launch note. The founder's personal story is `[HUMAN]`.
+- **Bylined articles:** full drafts of the proposals in `marketing/press/bylines.md` once `pr-manager` says which are wanted. Write them as useful thought leadership for the publication's readers, not adverts: mention Embed once, at most, in the author bio line. The author is David Law or Aidan Brooks, as `pr-manager` decides; take their bio from the brief's founders table.
+- **Launch newsletter or LinkedIn article:** the founders' launch note, built on the brief's vision, "What we believe" and "Our story". It's the main long-form "why".
+- **Customer launch kit:** a short, editable pack that a customer's leader can use to introduce Embed to their own people. It answers the employee fear in the brief's "Hopes and fears" table ("Will I be replaced, or left behind?") with its hope and line. Include an announcement email and a short FAQ, built from the brief only.
+- Long pieces may open with the vision and AI's stakes, but follow the brief's hopes-and-fears rules: answer every fear with a hope and an action, and use no AI statistics or forecasts.
 - **Sales one-pager:** problem, what Embed does, proof, pricing, getting started, security in short. Use the brief's short security wording only.
 
 Start each file with the standard header from `CLAUDE.md`.

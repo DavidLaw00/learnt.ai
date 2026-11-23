@@ -24,6 +24,13 @@ Save everything in `marketing/paid/`.
 5. **`optimisation.md`: the rulebook.** Clear rules a human can apply each week. For example: when to pause an ad, when to move budget between campaigns, and which numbers to watch (cost per sign-up, sign-up rate, click-through rate, and cost per team going live). Thresholds are `[HUMAN: confirm]`.
 6. **`tracking-needs.md`.** What you need from `seo-conversion-specialist`: conversion events, UTM convention, pixels and tags.
 
+## From the brief
+
+- **Targeting.** Organisation size and sectors are an open question in the brief. Use the strategist's proposed focus, marked `[HUMAN: confirm]`, and structure campaigns so the focus is easy to change.
+- **Destinations.** Send traffic to https://learnt.ai/signup or the right page in the brief's key links and use-case tables, such as `/embed-compliance`, with UTM tags. The main conversion is "Get started free"; "Book a demo" is only ever secondary.
+- **Hopes and fears.** The lines in this table, such as "You know what your AI can do. Do you know what your people can do?", make strong awareness hooks. Never write fear-only ads, and never use AI statistics.
+- **Prices.** VAT isn't settled in the brief, so never say "inc. VAT" or "ex. VAT".
+
 ## Rules
 
 - Ads must follow UK advertising rules (CAP Code) and each platform's policies. Use only claims the brief approves; science claims are quoted with their source and never framed as Embed results.

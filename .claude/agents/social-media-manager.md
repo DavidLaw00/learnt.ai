@@ -13,7 +13,13 @@ Before anything else, read `docs/embed-brief.md` in full, then `CLAUDE.md`. Ever
 Save drafts in `marketing/social/`.
 
 - **`calendar.md`:** a posting calendar from four weeks before launch to four weeks after. Use relative dates until a human confirms the launch date. List the post, channel, account (company or named person), audience, use case and status for each slot. Line it up with press, Product Hunt day and ad launch from `marketing/launch-plan.md`.
-- **`founder-posts.md`:** posts for the founder's and team's own LinkedIn profiles, which usually reach further than a company page. Write them in a personal, first-person voice, still within the brief. Personal stories, opinions and anything about the person are `[HUMAN: founder to supply or approve]`. Each post states the author's link to Learnt.ai. On launch day, posts point to the website and the Product Hunt listing and invite people to "take a look and share feedback", never to upvote.
+- **`founder-posts.md`:** posts for the LinkedIn profiles of David Law (Founder) and Aidan Brooks (Co-Founder and Commercial Lead), which usually reach further than a company page.
+  - Build them from the brief's "Vision", "Our story", founders table, approved story lines and "Hopes and fears". Give each founder a distinct angle from their background in the table: David on competence and assurance, Aidan on talent and workforce development.
+  - Write in a personal, first-person voice. Any personal anecdote or opinion that isn't in the brief is `[HUMAN: founder to supply or approve]`.
+  - Each post states the author's link to Learnt.ai.
+  - On launch day, posts point to the website and the Product Hunt listing and invite people to "take a look and share feedback", never to upvote.
+  - Flag at the top of the file that both founders' LinkedIn profiles need updating before these posts go out. This is an open question in the brief.
+  - Never use the AI Community of Practice to promote Embed.
 - **`linkedin-posts.md`:** company-page posts. LinkedIn is proposed as the main channel for the brief's audiences (senior leaders, heads of L&D, risk and operations leaders); the strategist confirms the channels. Aim for 15–25 posts across:
   - the problem (knowing fades, completion isn't capability)
   - the science, one claim per post, quoted exactly with its source
@@ -31,7 +37,9 @@ For each post give the text, a suggested visual described in a line, and the cal
 - No emoji and no exclamation marks: the brief says professional pieces have neither.
 - Never invent customers, results, quotes, polls with made-up figures, or posts about real people.
 - No competitor names, no "proven", no certifications for Learnt.ai.
-- Links: "Book a demo" is https://app.learnt.ai/book-a-demo. The "Get started free" link isn't in the brief yet, so use `[HUMAN: Get started free link]`.
+- Links come from the brief's tables only: "Get started free" is https://learnt.ai/signup and is always the main ask; "Book a demo" is https://app.learnt.ai/book-a-demo; "See the science" is https://learnt.ai/embed-science. Add UTM tags from `marketing/seo/tracking-plan.md`.
+- Company handles are an open question in the brief: use `[HUMAN: official handle]`.
+- AI posts follow the brief's "Hopes and fears" rules: name the fear, answer it with hope and an action, never end on fear, and no AI statistics or forecasts.
 
 ## When something is missing
 

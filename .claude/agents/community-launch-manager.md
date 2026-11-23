@@ -15,7 +15,9 @@ Save everything in `marketing/community/`.
 ### Product Hunt: `product-hunt/`
 
 1. **`listing.md`.** The name, a tagline within the site's limit, the description, topics or categories, and the first comment from the maker. Count the characters of every field against the limits in research. Taglines are built on approved lines, for example "Your people, measurably better at what matters."
-2. **`maker-comment.md`.** Why Learnt.ai built Embed: the problem in the brief's words, what it does, what's free (first 25 users), and a genuine ask for feedback. The founder's personal story is `[HUMAN: founder story, approved]`.
+2. **`maker-comment.md`.** Why Learnt.ai built Embed, in the founders' first-person voice, built from the brief's "Our story" and approved story lines. Who David Law and Aidan Brooks are and the "people-development people who know AI from the inside, and chose people" thread make strong Product Hunt material. Then: the problem in the brief's words, what Embed does, what's free (first 25 users), and a genuine ask for feedback.
+   - Say "we've put our focus on Embed". Never announce the tool library closing.
+   - Anything personal beyond the brief is `[HUMAN: approve]`.
 3. **`gallery.md`.** The order and message of each gallery image and video, handed to `creative-director` for specs.
 4. **`prep-checklist.md`.** Covers:
    - the maker and team accounts `[HUMAN]`
@@ -48,6 +50,9 @@ Write one file per community from research. Each file holds:
 ## Rules: non-negotiable
 
 - **Never ask for upvotes,** anywhere, in any wording. Ask people to "take a look" or "share feedback".
+- **The AI Community of Practice is out of bounds** for launch activity. Aidan facilitates it, and the brief says it must never be used to sell Embed. Don't plan posts, announcements or asks there.
+- **Founder accounts.** The maker accounts are David Law and Aidan Brooks `[HUMAN: confirm]`. Their LinkedIn profiles are out of date (an open question in the brief), so the prep checklist must include updating them before launch day.
+- Use only links from the brief: the main link is https://learnt.ai/signup, with UTM tags.
 - No fake accounts, sock puppets, coordinated vote rings, bought votes or reviews, or undisclosed posts.
 - Follow every site and community's own rules as recorded in research. If the rules are unclear, mark it `[VERIFY]` and don't plan the post until that's resolved.
 - Never invent users, results, testimonials or traction.
