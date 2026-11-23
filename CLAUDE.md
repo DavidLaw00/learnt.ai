@@ -95,8 +95,8 @@ Teammate definitions live in `.claude/agents/` (fourteen in all). Each teammate 
 | `community-launch-manager` | Product Hunt and other launch sites, groups and communities, launch-day runbook | `marketing/community/` |
 | `creative-director` | Visual and video briefs for every channel, ad creative specs, Product Hunt gallery, demo video script | `marketing/creative/` |
 | `growth-lead` | Experiment system: taxonomy, registry, funnel, rounds, analysis, learnings | `marketing/growth/` |
-| `outbound-sdr` | Target criteria, Waalaxy sequences, cold email, reply handling, demo playbook, follow-ups | `marketing/outbound/` |
-| `automation-architect` | CRM design and Zapier specs connecting TidyCal, Waalaxy, Buffer, email, Slack or Teams and sign-up | `marketing/automation/` |
+| `outbound-sdr` | Target criteria, Waalaxy LinkedIn sequences, reply handling, demo playbook, follow-ups (no cold email for now) | `marketing/outbound/` |
+| `automation-architect` | CRM design and Zapier specs connecting HubSpot, TidyCal, Waalaxy, Buffer, email, Microsoft Teams and the Bubble app | `marketing/automation/` |
 | `brand-reviewer` | Checks every draft against the brief, these rules, ad rules and platform rules | `marketing/reviews/` |
 
 Shared files:

@@ -53,7 +53,7 @@ Check every line against these, in order:
     - Messages are disclosed and sent in the first person from a real founder.
     - No fake familiarity, no false "re:" or "following up" lines, and no invented mutual connections.
     - Every message is within the character limits from research.
-    - Cold email has an identity and an opt-out line.
+    - Cold email is parked: flag any that appears.
     - Nothing claims what "teams like yours" achieved.
     - Automation specs handle opt-outs across every tool, and only post or send after a human approves.
 15. **Tracking and timing.** The header has an experiment ID (or "none") and a launch timing. Links carry UTM tags in line with `marketing/growth/taxonomy.md`. Pre-launch pieces ask for a demo; post-launch pieces put "Get started free" first.

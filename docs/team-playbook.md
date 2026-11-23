@@ -43,7 +43,7 @@ Create an agent team for Phase 1 of the Embed launch, as described in docs/team-
 
 **Produces:**
 - targeting criteria for Waalaxy
-- Round 1 LinkedIn sequences and cold email (each a tracked variant)
+- Round 1 LinkedIn sequences (each a tracked variant; cold email is parked for now)
 - reply scripts, the demo playbook and follow-ups
 - the CRM design and Zapier specs: opt-outs, TidyCal, Waalaxy, Buffer, alerts, weekly numbers
 - compliance notes
@@ -54,7 +54,7 @@ Create an agent team for Phase 1 of the Embed launch, as described in docs/team-
 Create an agent team for Phase 2 of the Embed launch, as described in docs/team-playbook.md. Use launch-strategist as lead, with outbound-sdr, automation-architect, growth-lead and brand-reviewer from .claude/agents. Pre-launch, the call to action is Book a demo. outbound-sdr writes targeting, the Round 1 Waalaxy sequences as defined in growth-lead's registry, reply scripts and the demo playbook. automation-architect writes the CRM design and Zapier specs, starting with opt-out handling and TidyCal bookings. brand-reviewer checks every message and spec. Finish with a build-and-launch checklist for the human and an updated marketing/flags.md.
 ```
 
-**Your actions:** build the zaps in the order in `marketing/automation/build-order.md` and test them. Set up the Waalaxy campaigns using the experiment IDs as names. Start Round 1 within Waalaxy's safe limits.
+**Your actions:** build the zaps in the order in `marketing/automation/build-order.md` and test them. Set up the Waalaxy campaigns using the experiment IDs as names. Start Round 1 within Waalaxy's safe limits. The starting specs are `marketing/automation/hubspot-properties.md` and `marketing/automation/bubble-to-zapier.md`.
 
 ---
 

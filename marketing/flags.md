@@ -18,11 +18,14 @@ Format: `- [ ] Question or gap. (raised by: teammate, file)`
 
 ## Pipeline, tools and tracking
 
-- [ ] Which CRM will hold leads? Options include a free CRM, or Airtable or a Google Sheet. automation-architect will recommend one. (raised by: set-up)
-- [ ] Which email marketing tool, and Slack or Teams? (raised by: set-up)
-- [ ] Can the Embed sign-up (Bubble) send a webhook on sign-up and on key actions, such as nearing 25 users? (raised by: set-up)
+- [x] CRM: HubSpot (trial). Field list in marketing/automation/hubspot-properties.md. (Dave, 23 Nov 2026)
+- [ ] Which HubSpot plan, and how many custom properties does it allow? Free plans may cap them; the field list marks must-haves. (raised by: set-up)
+- [x] Chat alerts: Microsoft Teams. (Dave, 23 Nov 2026)
+- [ ] Which email marketing tool, or will HubSpot's own email do? (raised by: set-up)
+- [x] Bubble can send events to Zapier. Set-up in marketing/automation/bubble-to-zapier.md. (set-up)
+- [ ] Which Bubble plan is the app on, and which Zapier plan? Database-trigger events in Bubble and Webhooks by Zapier may both need paid plans. (raised by: set-up)
 - [ ] Which LinkedIn accounts run Waalaxy: David, Aidan or both? Are they free or premium? Automating LinkedIn breaches its User Agreement and can get accounts restricted, so do you accept that risk on the founders' accounts? (raised by: set-up)
-- [ ] Will you run cold email as well as LinkedIn? If so, from which domain? A separate sending domain protects learnt.ai's email reputation. (raised by: set-up)
+- [x] Cold email: parked for now. LinkedIn outreach only. (Dave, 23 Nov 2026)
 - [ ] Have you recorded a legitimate-interests assessment for B2B outreach under UK GDPR? (raised by: set-up)
 - [ ] What can be offered at a pre-launch demo: early access, help at launch, anything else? (raised by: set-up)
 - [ ] How long should each round run? The proposal is two weeks. (raised by: set-up)

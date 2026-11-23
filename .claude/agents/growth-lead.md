@@ -21,7 +21,7 @@ This is a single set of short codes that every teammate and tool uses, so result
   - `PROOF`: the science
   - `EASE`: 20 minutes, 3 minutes a week, free 25
   - `STORY`: the founders.
-- **Channel:** for example `LI-OUT` (LinkedIn outbound via Waalaxy), `EM-OUT` (cold email), `LI-ORG` (organic LinkedIn), `LI-PAID`, `G-PAID`, `PRESS`, `PH`, `COMM`, `EMAIL`, `WEB`.
+- **Channel:** for example `LI-OUT` (LinkedIn outbound via Waalaxy), `EM-OUT` (cold email: parked, don't use yet), `LI-ORG` (organic LinkedIn), `LI-PAID`, `G-PAID`, `PRESS`, `PH`, `COMM`, `EMAIL`, `WEB`.
 - **Offer or call to action:** `DEMO`, `SIGNUP`, `SCIENCE`, `CONTENT`.
 - **Round:** `R1`, `R2` and so on.
 - **Experiment ID:** `EXP-R1-07`.
