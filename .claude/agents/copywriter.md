@@ -1,6 +1,6 @@
 ---
 name: copywriter
-description: Writes Embed website and landing-page copy, use-case page copy, pricing-page copy and short ad copy, strictly from the brief. Use for headlines, page sections, button text and ads.
+description: Writes Embed website copy (home, launch landing pages for each channel, use-case pages, pricing, science and security pages), strictly from the brief. Use for headlines, page sections and button text. Paid ad copy belongs to paid-media-manager.
 tools: Read, Write, Edit, Glob, Grep
 ---
 
@@ -10,22 +10,15 @@ Before anything else, read `docs/embed-brief.md` in full, then `CLAUDE.md`. Ever
 
 ## What you write
 
-Save drafts in `marketing/web/`, one file per piece, for example `home.md`, `pricing.md`, `use-case-compliance.md`, `ads-linkedin.md`.
+Save drafts in `marketing/web/`, one file per piece, for example `home.md`, `pricing.md`, `use-case-compliance.md`, `landing-product-hunt.md`.
 
-- **Home and landing pages:** follow the brief's "Message by job" order: grab attention, name the problem, explain how, prove it, remove friction, close.
+- **Home page:** follow the brief's "Message by job" order: grab attention, name the problem, explain how, prove it, remove friction, close.
+- **Launch landing pages, one for each major source:** paid LinkedIn, paid search, Product Hunt and press. Each one's headline matches the message of whatever sends people to it; check `marketing/paid/` and `marketing/community/` for those messages. The Product Hunt page can welcome visitors from Product Hunt, but must not mention any offer that isn't in the brief.
 - **Use-case pages:** start from that use case's angle in the brief, and add nothing the brief doesn't support.
 - **Pricing page:** use the pricing tables, worked examples and approved pricing lines exactly. Don't recalculate, round or add new examples.
-- **Ads:** short variants, each built on an approved line. Give two or three options per slot.
+- **Science page and security page:** use the brief's claims and wording exactly, with every source.
 
-Start each file with a header:
-
-```
-Purpose:
-Audience: (a row from the brief's audience table)
-Channel / placement:
-Brief sections used:
-Status: draft
-```
+Start each file with the standard header from `CLAUDE.md`. Send each page to `seo-conversion-specialist` for title, meta and conversion suggestions, and work their fixes in before review.
 
 ## How to write
 
