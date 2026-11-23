@@ -29,7 +29,8 @@ Start each file with the standard header from `CLAUDE.md`. Send each page to `se
 - Short sentences. One idea per sentence. British English. No exclamation marks or emoji.
 - "You" and "your people", never "learners" or "users" outside pricing.
 - Science claims are quoted exactly, with their source, and framed as research on the methods Embed uses, never as results of Embed.
-- Calls to action follow the brief's table: "Get started free" (https://learnt.ai/signup) always first, and "Book a demo" (https://app.learnt.ai/book-a-demo) next to it as the secondary option, never the other way round. "See the science" goes on content-heavy and sceptical-reader sections.
+- **Before launch,** pages use "Book a demo" as the main action, following the brief's "Before launch" note. Write a pre-launch version of the home page and launch pages, with the demo as the single ask, and say what happens in the demo using the brief only.
+- **From launch day,** calls to action follow the brief's table: "Get started free" (https://learnt.ai/signup) always first, and "Book a demo" (https://app.learnt.ai/book-a-demo) next to it as the secondary option, never the other way round. "See the science" goes on content-heavy and sceptical-reader sections.
 - Never touch anything in the brief's open questions: VAT, whether the free 25 applies to monthly payment, integrations or how nudges are delivered, customers.
 
 ## When something is missing

@@ -1,6 +1,8 @@
 # learnt.ai: Embed launch marketing
 
-This repository holds the marketing work for a major, multi-channel launch of **Embed**, by Learnt.ai: press, paid ads, search, social, communities and launch sites such as Product Hunt.
+This repository holds the marketing work for a major, multi-channel launch of **Embed**, by Learnt.ai: press, paid ads, search, social, communities, launch sites such as Product Hunt, and outbound.
+
+**The commercial goal is a calendar full of qualified demos (booked in TidyCal), which become sign-ups after launch.** Attention matters only as far as it feeds that. Every piece of work is a tracked experiment, so each round gets better than the last.
 
 ## Rule 1: the brief is the source of truth about Embed
 
@@ -30,7 +32,11 @@ The team plans and writes. It never:
 - buys ads, sets budgets or commits spend
 - creates accounts or signs up for anything.
 
-Everything ends as a draft marked `ready for human`.
+Everything ends as a draft marked `ready for human`. Humans run the tools (Waalaxy, Zapier, Buffer, TidyCal, the email tool and the CRM) and switch on anything that sends or posts.
+
+## Rule 3a: no personal data in this repository
+
+Never write prospects' or customers' names, emails, LinkedIn URLs or other personal details into the repository. Lists of people live in Waalaxy and the CRM, not here. Data files hold aggregate counts by experiment ID only. If someone pastes raw personal data, use only the aggregates and say it should be deleted.
 
 ## Rule 4: earn attention honestly
 
@@ -74,7 +80,7 @@ Search for both before anything goes live.
 
 ## The team
 
-Teammate definitions live in `.claude/agents/`. Each teammate owns one folder and doesn't write in anyone else's folder.
+Teammate definitions live in `.claude/agents/` (fourteen in all). Each teammate owns one folder and doesn't write in anyone else's folder.
 
 | Teammate | Owns | Folder |
 |---|---|---|
@@ -88,11 +94,16 @@ Teammate definitions live in `.claude/agents/`. Each teammate owns one folder an
 | `social-media-manager` | Organic social from the company and founders, posting calendar | `marketing/social/` |
 | `community-launch-manager` | Product Hunt and other launch sites, groups and communities, launch-day runbook | `marketing/community/` |
 | `creative-director` | Visual and video briefs for every channel, ad creative specs, Product Hunt gallery, demo video script | `marketing/creative/` |
+| `growth-lead` | Experiment system: taxonomy, registry, funnel, rounds, analysis, learnings | `marketing/growth/` |
+| `outbound-sdr` | Target criteria, Waalaxy sequences, cold email, reply handling, demo playbook, follow-ups | `marketing/outbound/` |
+| `automation-architect` | CRM design and Zapier specs connecting TidyCal, Waalaxy, Buffer, email, Slack or Teams and sign-up | `marketing/automation/` |
 | `brand-reviewer` | Checks every draft against the brief, these rules, ad rules and platform rules | `marketing/reviews/` |
 
 Shared files:
 - `marketing/flags.md`: the single list of everything that needs a human. Anyone adds; the strategist tidies; only a human resolves.
 - `marketing/research/`: the single source for outside facts. Ask the researcher rather than searching separately.
+- `marketing/growth/taxonomy.md`: the codes and naming rules every teammate uses for experiment IDs, UTMs, Waalaxy campaigns, Buffer posts and CRM sources.
+- `marketing/growth/learnings.md`: what previous rounds taught. Read it before drafting anything for a new round.
 
 ## How work flows
 
@@ -104,6 +115,8 @@ Shared files:
    Channel / placement:
    Brief sections used:
    Research used: (files in marketing/research/, if any)
+   Experiment: (ID from marketing/growth/experiments.md, and the variable this piece tests, or "none")
+   Launch timing: pre-launch | post-launch | both
    Status: draft
    ```
 3. The brand reviewer checks each draft and gives a verdict of **Ready**, **Ready with edits** or **Not ready**.
@@ -117,7 +130,7 @@ Shared files:
 The brief's "Vision", "Our story", "Hopes and fears", "Voice and style", "Guardrails" and "Names, links and company details" sections are the full rules. The ones most often missed:
 
 - **Names.** Write "Embed by Learnt.ai" on first mention where both are needed. Learnt.ai has a capital L and a lower-case ".ai". Embed has a capital E. Never promote Create.
-- **Calls to action.** "Get started free" (https://learnt.ai/signup) always comes first. "Book a demo" is only ever the secondary option. Use only links from the brief's tables.
+- **Calls to action.** These follow the brief's calls to action, including its "Before launch" note. Before launch day, "Book a demo" (https://app.learnt.ai/book-a-demo) is the main action, and "Get started free" isn't used. From launch day, "Get started free" (https://learnt.ai/signup) comes first, and "Book a demo" is for people who want to see it first. Mark each draft `pre-launch` or `post-launch`. Use only links from the brief's tables, with UTM tags from the growth taxonomy.
 - **Vision and story.** Use them for the why (About, founder posts, press, launch sites, openings of long pieces), not on product or use-case pages. Story numbers are exact: "a combined 35+ years in people development", "110 AI tools", "more than 34,000 users". Don't split the 35+ years between the founders. The only past employers that may be named are those in the brief's founders table. Never use the words "passionate" or "authentic".
 - **AI fears.** Name a fear only to answer it with a hope and an action, and never end on fear. No job-loss predictions, no AI statistics or forecasts, never "AI will replace people".
 - **The AI Community of Practice.** Mention it only to show Learnt.ai is part of the conversation (learnt.ai/join-the-community). Never use it, or any post in it, to sell or launch Embed.

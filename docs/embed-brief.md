@@ -306,6 +306,8 @@ Lead with human capability, performance and proof. AI sets the stakes; Embed is 
 
 The business is self-serve. Make Get started free the main action and Book a demo the alternative, never the other way round.
 
+**Before launch (added 23 Nov 2026, from Dave in chat; confirm or edit):** until launch day, the only way to see Embed is a demo. In pre-launch outreach, ads, posts and pages, Book a demo (https://app.learnt.ai/book-a-demo) is the main action, and Get started free isn't used. From launch day, the table above applies: Get started free first, and Book a demo for people who want to see it before they sign up.
+
 ## Voice and style
 
 Write like a confident, plain-speaking expert talking to a busy leader: short, specific and honest.

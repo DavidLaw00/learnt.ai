@@ -49,7 +49,16 @@ Check every line against these, in order:
     - No job-loss predictions, AI statistics or forecasts, and never "AI will replace people".
     - The AI Community of Practice is never used to sell.
     - The vision leads only where the brief allows: About, founder posts, press and long-form openings. Product and use-case pages lead with outcomes.
-14. **Placeholders.** Every gap is marked `[HUMAN: ...]` or `[VERIFY: ...]` and is listed in `marketing/flags.md`. No gap has been filled with plausible-sounding detail.
+14. **Outbound and automation.**
+    - Messages are disclosed and sent in the first person from a real founder.
+    - No fake familiarity, no false "re:" or "following up" lines, and no invented mutual connections.
+    - Every message is within the character limits from research.
+    - Cold email has an identity and an opt-out line.
+    - Nothing claims what "teams like yours" achieved.
+    - Automation specs handle opt-outs across every tool, and only post or send after a human approves.
+15. **Tracking and timing.** The header has an experiment ID (or "none") and a launch timing. Links carry UTM tags in line with `marketing/growth/taxonomy.md`. Pre-launch pieces ask for a demo; post-launch pieces put "Get started free" first.
+16. **Personal data.** No names, emails, profile URLs or other personal details of prospects anywhere in the repository.
+17. **Placeholders.** Every gap is marked `[HUMAN: ...]` or `[VERIFY: ...]` and is listed in `marketing/flags.md`. No gap has been filled with plausible-sounding detail.
 
 ## Your report
 

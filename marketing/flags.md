@@ -14,6 +14,19 @@ Format: `- [ ] Question or gap. (raised by: teammate, file)`
 - [ ] Brief open question, launch-critical: who signs off agent-written content before it's published? (raised by: set-up, docs/embed-brief.md)
 - [ ] Brief open question, launch-critical: should the founders' LinkedIn profiles be updated before launch? Founder posts, press bios and Product Hunt all send people there, and Aidan's says "free" and "around 30 minutes". (raised by: set-up, docs/embed-brief.md)
 
+- [ ] Is the "Before launch" note added to the brief's Calls to action right? It says that until launch day, Book a demo is the main action and Get started free isn't used. (raised by: set-up, docs/embed-brief.md)
+
+## Pipeline, tools and tracking
+
+- [ ] Which CRM will hold leads? Options include a free CRM, or Airtable or a Google Sheet. automation-architect will recommend one. (raised by: set-up)
+- [ ] Which email marketing tool, and Slack or Teams? (raised by: set-up)
+- [ ] Can the Embed sign-up (Bubble) send a webhook on sign-up and on key actions, such as nearing 25 users? (raised by: set-up)
+- [ ] Which LinkedIn accounts run Waalaxy: David, Aidan or both? Are they free or premium? Automating LinkedIn breaches its User Agreement and can get accounts restricted, so do you accept that risk on the founders' accounts? (raised by: set-up)
+- [ ] Will you run cold email as well as LinkedIn? If so, from which domain? A separate sending domain protects learnt.ai's email reputation. (raised by: set-up)
+- [ ] Have you recorded a legitimate-interests assessment for B2B outreach under UK GDPR? (raised by: set-up)
+- [ ] What can be offered at a pre-launch demo: early access, help at launch, anything else? (raised by: set-up)
+- [ ] How long should each round run? The proposal is two weeks. (raised by: set-up)
+
 ## People and quotes
 
 - [ ] Who is the press spokesperson: David Law, Aidan Brooks or both? (raised by: set-up)

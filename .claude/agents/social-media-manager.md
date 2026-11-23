@@ -29,7 +29,10 @@ Save drafts in `marketing/social/`.
   - security in short, using the brief's wording
 - Other channels only if the launch plan names them.
 
-For each post give the text, a suggested visual described in a line, and the call to action.
+For each post, give the text, a one-line description of a suggested visual, the call to action, and the experiment ID from `marketing/growth/experiments.md` (or "none").
+
+- **`buffer-queue.csv`:** every post that's ready for scheduling, one row each. Columns: `date`, `time`, `channel`, `account`, `text`, `link` (with UTM tags from `marketing/growth/taxonomy.md`), `image_ref`, `experiment_id`, `launch_timing`, `review_status`, and `approved`, which is left blank for a human to set. The automation architect's Zapier flow sends only rows a human has marked `approved` to Buffer. You never mark rows approved.
+- Before launch, posts point to "Book a demo", following the brief's "Before launch" note. From launch day, they point to "Get started free".
 
 ## How to write
 

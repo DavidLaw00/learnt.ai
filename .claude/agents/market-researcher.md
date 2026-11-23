@@ -24,7 +24,14 @@ Save each topic as its own file in `marketing/research/`.
 4. **`keywords.md`: search.** Keyword themes for each audience and use case, such as skills decay, proving training impact, compliance training evidence and capability assessment. Include intent and any volume or difficulty data with its tool and date. If you can't get volumes, say so; don't estimate them.
 5. **`ad-platforms.md`: paid channels.** For LinkedIn Ads, Google Ads and any other channel the strategist asks about: current ad formats, character limits, image and video specs, targeting options relevant to the audiences, policies that affect this product (for example on claims and on AI), and published benchmark ranges with source and date.
 6. **`calendar.md`: timing.** Industry events, conferences, awareness days and seasonal moments relevant to the audiences and use cases, plus dates to avoid, for example bank holidays or major tech launches that would bury news.
-7. **Ad hoc questions** from teammates. Answer in a file named for the question and tell the teammate where it is.
+7. **`outreach-tools.md`: the outbound and automation stack.** For each tool, check against its own documentation:
+   - **Waalaxy:** which actions it automates (visit, invite, message, email), its variable syntax, recommended daily and weekly limits, campaign naming, export formats, and integrations or webhooks for Zapier.
+   - **LinkedIn:** invitation note character limits for free and premium accounts, message limits, and what LinkedIn's User Agreement says about third-party automation tools (quoted).
+   - **TidyCal:** Zapier triggers, whether booking links keep UTM parameters, and custom booking questions.
+   - **Buffer:** Zapier actions (queue, draft, tags) and channel limits.
+   - **Zapier:** plan limits that matter (tasks, multi-step zaps, filters).
+   - **UK rules:** the ICO's guidance on B2B direct marketing under UK GDPR (legitimate interests) and PECR (corporate subscribers, sole traders and partnerships, identification and opt-out).
+8. **Ad hoc questions** from teammates. Answer in a file named for the question and tell the teammate where it is.
 
 Don't list the AI Community of Practice (learnt.ai/join-the-community) as a launch channel. Aidan facilitates it, and the brief says it must never be used to sell Embed.
 

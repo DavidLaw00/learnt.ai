@@ -27,6 +27,8 @@ Save everything in `marketing/paid/`.
 ## From the brief
 
 - **Targeting.** Organisation size and sectors are an open question in the brief. Use the strategist's proposed focus, marked `[HUMAN: confirm]`, and structure campaigns so the focus is easy to change.
+- **Pre-launch campaigns** drive demo bookings, following the brief's "Before launch" note. Consider LinkedIn Lead Gen Forms only if `automation-architect` has a Zapier route to the CRM and TidyCal `[VERIFY]`.
+- **Experiments.** Every ad variant carries an experiment ID from `marketing/growth/experiments.md`, and its UTM tags follow `marketing/growth/taxonomy.md`.
 - **Destinations.** Send traffic to https://learnt.ai/signup or the right page in the brief's key links and use-case tables, such as `/embed-compliance`, with UTM tags. The main conversion is "Get started free"; "Book a demo" is only ever secondary.
 - **Hopes and fears.** The lines in this table, such as "You know what your AI can do. Do you know what your people can do?", make strong awareness hooks. Never write fear-only ads, and never use AI statistics.
 - **Prices.** VAT isn't settled in the brief, so never say "inc. VAT" or "ex. VAT".

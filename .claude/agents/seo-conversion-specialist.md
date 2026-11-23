@@ -23,7 +23,8 @@ Save everything in `marketing/seo/`.
 
    Send fixes to `copywriter` as specific suggestions. Propose A/B tests for after launch, one variable each.
 4. **`tracking-plan.md`.**
-   - **UTM convention:** source, medium, campaign and content naming rules, with examples for press, each paid channel, each social channel, Product Hunt, each community and email.
+   - **UTM convention:** source, medium, campaign and content naming rules, with examples for press, each paid channel, each social channel, Product Hunt, each community, email, Waalaxy outbound and the TidyCal booking link. It must use the codes in `marketing/growth/taxonomy.md`, so every visit, booking and sign-up traces back to its experiment ID. Agree the format with `growth-lead`.
+   - **Demo bookings:** how source and experiment ID reach TidyCal bookings and then the CRM, working with `automation-architect`.
    - **Conversion events:** for example visit, start sign-up, complete sign-up, add users, generate content, go live. Mark each one `[HUMAN: confirm event exists in product/analytics]`.
    - **What each channel needs:** the pixels and tags requested by `paid-media-manager`, and any tracking-link needs for launch sites.
    - **Analytics stack:** `[HUMAN: which analytics tool]`.
