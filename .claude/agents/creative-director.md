@@ -12,7 +12,7 @@ Read `docs/embed-brief.md` in full, then `CLAUDE.md`, `marketing/launch-plan.md`
 
 Save everything in `marketing/creative/`.
 
-1. **`visual-direction.md`.** The launch's look and feel, in words: mood (calm, confident, credible, not "AI hype"), a few visual concepts for the brief's core ideas (knowledge fading over time; the living picture of capability; 3 minutes a week; capable, not just trained), the style of imagery, and what to avoid (stock photos of people in classrooms, robots and glowing brains, anything that looks like an e-learning course).
+1. **`visual-direction.md`.** The launch's look and feel, in words: mood (calm, confident, credible, not "AI hype"), a few visual concepts for the brief's core ideas (knowledge fading over time; the living picture of capability; 3 minutes a week; competent, not just trained; human capability growing alongside AI, with people at the centre, not robots), the style of imagery, and what to avoid (stock photos of people in classrooms, robots and glowing brains, anything that looks like an e-learning course).
    - Brand colours, fonts and logo: `[HUMAN: brand guidelines and logo files]`. If the Learnt brand skill (learnt-branding) is available in the session, use it, and say so.
 2. **`asset-list.md`.** Every asset the launch needs, collected from the other teammates' plans. For each one: name, channel, purpose, size and format specs from research (with `[VERIFY]` where research marks it), owner, and status.
 3. **`briefs/`.** One brief per asset or set of assets: ads, Product Hunt gallery, social, press kit, and landing-page hero images. Each brief covers:
