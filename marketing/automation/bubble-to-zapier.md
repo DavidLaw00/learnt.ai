@@ -105,7 +105,7 @@ After the catch hook, add **Paths**, split on `event`, or one zap per event. For
 
 1. **Filter:** skip the event if the HubSpot contact has `embed_do_not_contact` set. Alerts are fine; skip any marketing step.
 2. **HubSpot → Create or update contact** (matched on email), then **Find or create company** (on domain), then associate them.
-3. **HubSpot → Create or update deal** at the stage in the table above.
+3. **HubSpot → Create or update deal** at the stage in the table above. When creating it, set **Source experiment** from the contact's First-touch experiment.
 4. **Microsoft Teams → Send channel message**. Use a short alert such as:
    > New Embed sign-up: {organisation_name} ({utm_campaign}). Owner: {first_name}, {job_title}. Open in HubSpot: {link}
 

@@ -85,15 +85,28 @@ Rename the default sales pipeline, or create one if your plan allows `[VERIFY]`.
 
 Post-launch sign-ups with no demo get a deal too, created at **Signed up** by the Bubble zap. That way you see both routes: demo first, or straight to sign-up.
 
-**Deal name:** `[Company] – Embed`. **Custom deal properties:** none needed. Report on the associated contact's channel and experiment.
+**Deal name:** `[Company] – Embed`.
+
+**One custom deal property:** **Source experiment** (`embed_deal_experiment`, single-line text). The zap that creates the deal copies it from the contact's First-touch experiment. Reporting on deals by a contact's field can need a paid HubSpot tier; with this copy, every report is a simple single-object report.
+
+Don't add HubSpot's suggested deal fields: "Learning objective", "Risk mitigation focus", "Expected performance improvement (%)" or "Number of participants". Expected improvement (%) invites Embed result percentages, which the brief bans. If you want deal sizing, add "Estimated places" (number).
 
 ---
 
-## Reports to build first
+## Dashboard: "Embed Pipeline"
 
-1. **Deals by stage, broken down by first-touch experiment.** This is your main growth report.
-2. **Demos booked per week, by outreach account** (David or Aidan).
-3. **Outreach status counts by experiment:** invited, then connected, replied, positive and booked.
-4. **Do-not-contact count.** Should only grow, and every zap should respect it.
+Build these in Reports → Create report, as single-object reports. HubSpot's setup assistant can only use its own templates, so skip it.
+
+| # | Object | Chart | Set-up |
+|---|---|---|---|
+| 1 | Deals | Stacked bar | Filter: pipeline = Embed. X-axis: Deal stage. Break down by: Source experiment. **This is your main growth report.** |
+| 2 | Contacts | Table | Rows: First-touch experiment. Columns: Outreach status. Value: count |
+| 3 | Contacts | Bar | Filter: Demo status is any of Booked, Held. X-axis: Demo date (weekly). Break down by: Outreach account |
+| 4 | Deals | Funnel | Deal stages in pipeline Embed: Demo booked → Paid |
+| 5 | Contacts | Bar | X-axis: First-touch channel |
+| 6 | Contacts | Single value | Filter: Do not contact is true. Value: count. Should only grow |
+| 7 | Deals | Table | Filter: stage = Lost. Rows: Closed lost reason |
+
+Add "Deal revenue by source" after launch, once paid places exist.
 
 The weekly-numbers zap (see `automation-architect`) exports these as counts by experiment ID for the growth lead. Never export names.
