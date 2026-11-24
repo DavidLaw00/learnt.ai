@@ -306,7 +306,7 @@ Lead with human capability, performance and proof. AI sets the stakes; Embed is 
 
 The business is self-serve. Make Get started free the main action and Book a demo the alternative, never the other way round.
 
-**Before launch (added 23 Nov 2026, from Dave in chat; confirm or edit):** until launch day, the only way to see Embed is a demo. In pre-launch outreach, ads, posts and pages, Book a demo (https://app.learnt.ai/book-a-demo) is the main action, and Get started free isn't used. From launch day, the table above applies: Get started free first, and Book a demo for people who want to see it before they sign up.
+**Before launch (confirmed by Dave, 24 Nov 2026):** until launch day, the only way to see Embed is a demo. In pre-launch outreach, ads, posts and pages, Book a demo (https://app.learnt.ai/book-a-demo) is the main action, and Get started free isn't used. From launch day, the table above applies: Get started free first, and Book a demo for people who want to see it before they sign up.
 
 ## Voice and style
 
@@ -388,6 +388,11 @@ Agents must not use these until a person answers them and moves the answer into 
 - [ ] Target organisation size and sectors: who are we going after first?
 - [ ] Walkthrough film: length and the main points it covers, so agents can describe it.
 - [ ] Social accounts: the official handles for LinkedIn, YouTube and others.
-- [ ] Approval: who signs off agent-written content before it's published?
-- [ ] Founders' LinkedIn profiles: both still describe Learnt.ai as an AI content tool. Aidan's says Embed is "free" and takes "around 30 minutes" to set up, and frames it around training sticking. Update them to match this brief (20 minutes, first 25 users free, the vision)?
+- [ ] EU patent: is it granted or applied for? What is its number, and what does it cover? Can we mention it, and in what exact words? Until answered, don't mention a patent anywhere.
+- [ ] US market: should US audiences see prices in pounds, or in US dollars? If dollars, what are the prices? Should US-facing copy stay in British English?
 - [ ] Closing the tool library: is it the product now called Create, is the closure public, and from what date?
+
+### Answered
+
+- [x] Approval: Dave signs off all agent-written content personally for now. Relevant content is presented to him each day. (Dave, 24 Nov 2026)
+- [x] Founders' LinkedIn profiles: yes, both are being updated before launch to match this brief. (Dave, 24 Nov 2026)

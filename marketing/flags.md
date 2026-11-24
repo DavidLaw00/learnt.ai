@@ -4,17 +4,24 @@ Everything the team needs a person to supply, confirm or decide. Teammates add e
 
 Format: `- [ ] Question or gap. (raised by: teammate, file)`
 
-**Questions about Embed itself** (VAT, monthly free places, integrations and how nudges are delivered, customer proof, target size and sectors, walkthrough film, social handles, sign-off, founders' LinkedIn profiles, closing the tool library) are tracked in the brief's own **Open questions** section in `docs/embed-brief.md`. Answer them there, so every teammate picks them up. This file holds launch decisions only.
+**Questions about Embed itself** (VAT, monthly free places, integrations and how nudges are delivered, customer proof, target size and sectors, walkthrough film, social handles, closing the tool library, the EU patent, US prices and spelling) are tracked in the brief's own **Open questions** section in `docs/embed-brief.md`. Answer them there, so every teammate picks them up. This file holds launch decisions only.
 
-## Blocking: answer before Phase 1 if you can
+## Answered (24 Nov 2026)
 
-- [ ] What is the launch date? Are there dates to avoid? (raised by: set-up)
-- [ ] What is the overall budget range for paid media, and any for PR tools or an agency? (raised by: set-up)
-- [ ] What are the target markets: UK only, or UK plus others? This affects press, ad targeting and timing. (raised by: set-up)
-- [ ] Brief open question, launch-critical: who signs off agent-written content before it's published? (raised by: set-up, docs/embed-brief.md)
-- [ ] Brief open question, launch-critical: should the founders' LinkedIn profiles be updated before launch? Founder posts, press bios and Product Hunt all send people there, and Aidan's says "free" and "around 30 minutes". (raised by: set-up, docs/embed-brief.md)
+- [x] Launch date: public launch Tuesday 12 January 2027. Private demos with priority prospects start now, before Christmas. (Dave)
+- [x] Budget: £10,000 maximum. (Dave)
+- [x] Markets: UK and US. (Dave)
+- [x] Sign-off: Dave approves everything personally, through a daily review pack. (Dave; recorded in the brief)
+- [x] Founders' LinkedIn profiles: update before launch. Draft in marketing/social/founder-profiles.md. (Dave; recorded in the brief)
+- [x] "Before launch" calls-to-action note: confirmed. (Dave; recorded in the brief)
 
-- [ ] Is the "Before launch" note added to the brief's Calls to action right? It says that until launch day, Book a demo is the main action and Get started free isn't used. (raised by: set-up, docs/embed-brief.md)
+## Blocking now
+
+- [ ] Is the £10,000 for paid media only, or does it also cover PR tools, an agency, and Product Hunt or other launch-site costs? Should any be kept back for January? (raised by: set-up)
+- [ ] Which priority prospects should the private phase start with? Give criteria, not names: they belong in Waalaxy or HubSpot, not here. (raised by: set-up)
+- [ ] When will the founders' profile updates go live? Outbound should start after they do, because prospects check the profile first. (raised by: set-up)
+- [ ] Should Product Hunt go on 12 January with everything else, or on a different day? Research will advise. (raised by: set-up)
+- [ ] When can the launch date be mentioned in public? Before 12 January, copy says nothing about dates. (raised by: set-up)
 
 ## Pipeline, tools and tracking
 

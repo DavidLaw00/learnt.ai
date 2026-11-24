@@ -4,6 +4,29 @@ This repository holds the marketing work for a major, multi-channel launch of **
 
 **The commercial goal is a calendar full of qualified demos (booked in TidyCal), which become sign-ups after launch.** Attention matters only as far as it feeds that. Every piece of work is a tracked experiment, so each round gets better than the last.
 
+## Launch facts (set by Dave, 24 Nov 2026)
+
+| | |
+|---|---|
+| **Public launch** | Tuesday 12 January 2027 (L). Product Hunt and the press release go out the same day, unless research gives a reason to change and Dave agrees. |
+| **Private phase** | From now, speak privately to priority prospects by demo. No public announcement before L. |
+| **Dead zone** | Roughly 19 December to 4 January. No outbound automation or press pitches; plan around it `[VERIFY exact dates with research]`. |
+| **Budget** | £10,000 maximum in total, covering paid media plus any PR tools or agency. Plan a lean split and show what each pound buys. |
+| **Markets** | UK and US. Research, press tiers, ad targeting and timing cover both. US launch-site timing (for example Product Hunt's Pacific-time day) needs planning. US prices and US spelling are open questions in the brief, so don't show US-dollar prices or switch spelling. |
+| **Sign-off** | Dave approves all content personally. See "Daily review" below. |
+
+Public copy must not announce the launch date until Dave approves the announcement; the brief bans promising future dates.
+
+## Daily review
+
+Dave signs off everything, every day. At the end of each working session, the lead (strategist or growth lead) writes `marketing/daily-review/YYYY-MM-DD.md`:
+
+1. **Approve today:** each piece now `ready for human`, with its path, a one-line purpose, its experiment ID, when it's needed, and the reviewer's verdict. Time-critical items go first.
+2. **Decide today:** new or blocking items from `marketing/flags.md`.
+3. **Coming next:** what the team will produce next.
+
+Keep it short enough to read in ten minutes. Dave replies with "approved", "changes: ..." or "rejected" for each item. The lead records each decision in the piece's status (`approved` or `changes needed`) and in `marketing/approvals.md` (date, path, decision). Nothing is used until its status is `approved`.
+
 ## Rule 1: the brief is the source of truth about Embed
 
 Read `docs/embed-brief.md` in full before writing anything. It is the only source of facts, numbers, claims and approved wording about Embed.
@@ -67,13 +90,14 @@ Search for both before anything goes live.
 - **Target size and sectors.** Not set. Plans may propose a focus, marked `[HUMAN: confirm]`, but copy must not name one.
 - **Walkthrough film.** Don't describe its length or content.
 - **Social handles.** Use `[HUMAN: official handle]`.
-- **Sign-off.** Who approves agent-written content isn't decided. Every draft ends as `ready for human`.
+- **Patent.** Never mention a patent (EU or otherwise) until the brief says exactly what may be said.
+- **US prices and spelling.** No US-dollar prices; keep British English until the brief says otherwise.
 - **The tool library closure.** Never announce it or give a date. Say "we've put our focus on Embed".
-- **Founders' LinkedIn profiles.** They are out of date, and Aidan's says "free" and "around 30 minutes". Don't quote or link to them as a source. Any plan that sends people to the founders' profiles (founder posts, Product Hunt maker profiles, press bios) must flag that the profiles should be updated first.
+- **Founders' LinkedIn profiles.** Being updated before launch from `marketing/social/founder-profiles.md`. Until Dave confirms they're live, don't quote or link to them as a source.
 
 **Not in the brief at all.** Use `[HUMAN: ...]`. The full list is in `marketing/flags.md`.
 
-- Launch date, budget, KPI targets and target markets.
+- KPI targets.
 - Quotes from David Law or Aidan Brooks. The team may draft a suggested quote from the brief's approved lines, clearly labelled "draft quote for approval".
 - Brand assets: logo, colours, fonts and screenshots.
 - A media contact other than hello@learnt.ai, if one is wanted.
@@ -121,7 +145,7 @@ Shared files:
    ```
 3. The brand reviewer checks each draft and gives a verdict of **Ready**, **Ready with edits** or **Not ready**.
 4. Writers fix and resubmit. Only **Ready** moves a draft to `ready for human`.
-5. Status values: `draft`, `in review`, `changes needed`, `ready for human`.
+5. Status values: `draft`, `in review`, `changes needed`, `ready for human`, `approved` (only Dave sets this, through the daily review).
 
 `docs/team-playbook.md` sets out the launch phases and which teammates run in each.
 

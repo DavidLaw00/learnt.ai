@@ -4,6 +4,26 @@ How to run the fourteen-person marketing team. Launch day is **L**; dates are re
 
 **The goal:** a calendar full of qualified demos (TidyCal), which become sign-ups after launch, and getting measurably better at it each round.
 
+## The calendar (launch: Tuesday 12 January 2027)
+
+The Christmas break leaves about three working weeks before launch, so phases overlap. Priorities: get outbound running this week, and get press pitches out before the break.
+
+| When | What happens | Phase |
+|---|---|---|
+| **Tue 24 – Fri 27 Nov** | Foundation and pipeline engine run back to back: research, plan, taxonomy, Round 1 sequences, HubSpot and Zapier specs. Founders update their LinkedIn profiles. | 1, then 2 |
+| **Mon 30 Nov – Fri 11 Dec** | **Round 1 outbound** (private demos with priority prospects). The core build runs alongside: pages, content, press release and pitches. | 3 |
+| **Mon 7 – Fri 18 Dec** | Channels: ads, Product Hunt, community and social drafts. **Embargoed press pitches go out by about Wed 16 Dec**, for January coverage. Round 1 closes and Round 2 is planned (about 14 Dec). | 4, round review |
+| **Sat 19 Dec – Sun 3 Jan** | Break. No outbound automation, no pitches. Only follow-ups to replies you choose to answer. | none |
+| **Mon 4 – Mon 11 Jan** | Round 2 outbound (launch-week invitations), press follow-ups, final assets, ads built but not live, Product Hunt prep. | Round 2 |
+| **Tue 12 Jan (L)** | Public launch: website switches to "Get started free", press embargo lifts, Product Hunt, founder posts, ads go live. | Launch |
+| **From Wed 13 Jan** | Two-week rounds: analyse, decide, improve. | Rounds |
+
+The exact holiday dates, and when press pitches need to land for January, are `[VERIFY]` with research.
+
+## Daily review
+
+Dave approves everything. Each working session ends with a review pack in `marketing/daily-review/YYYY-MM-DD.md`; see "Daily review" in `CLAUDE.md`. Reply to each item with "approved", "changes: ..." or "rejected".
+
 ## Why phases
 
 An agent team works best with a lead and **three to five active teammates** at once. With more than that, coordination costs more than it saves. So the team runs in phases, each with only the teammates whose inputs are ready. Everything they write stays in `marketing/`, so each phase builds on the last.
