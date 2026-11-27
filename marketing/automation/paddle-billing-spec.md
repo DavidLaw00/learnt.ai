@@ -217,6 +217,28 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 - [HUMAN: before going live, create a live API key with minimum permissions (Notifications read, Subscriptions read and write, Customers read and write, Transactions read and write), a live collection or a switch in Bubble, and a live notification destination pointing at the live app URL.]
 - [HUMAN: delete the test Organisation "Paddle Sandbox Test Organisation (delete after testing)" from the development database once testing is finished.]
 
+## Self-serve checkout (built on Bubble branch `paddle-test`, 27 November 2026; not yet tested by clicking)
+
+**Decisions (David Law, 27 November 2026):**
+- **Billable person:** someone with at least one active content set assignment on a **live** content set (content set `active` = yes and `archived_at` empty). Each person counts once.
+- **Above 25:** the 26th person is blocked until the organisation has paid. [Not built yet: needs a check added to the assignment workflows.]
+- **Currency:** Paddle picks it from the buyer's location. The admin doesn't choose.
+
+**Page:** `embed_admin_billing`, a copy of the admin settings page, so it keeps the side menu, branding and the redirects for people who aren't logged in or aren't admins. It shows the number of people on live content sets, then one of:
+- the current plan, if subscribed
+- "You're using N of your 25 free places", under 25
+- the upgrade message and **Pay monthly** / **Pay annually** buttons, from 25 to 1,000
+- "Talk to us about a custom price", over 1,000.
+
+**What the buttons do:**
+1. A Toolbox **Server script** (on Bubble's server) builds the Paddle transaction. Places start at max(count, 26), split into bands, with lines named by band, local prices for 29 currencies as country overrides, and `custom_data` holding `org_id`, `billable_people` and `cycle`. The checkout URL is the site's own `/pay` page.
+2. API Connector `create_transaction` (POST `/transactions`) sends it to Paddle.
+3. The admin is sent to Paddle's checkout link. After payment, Paddle creates the subscription, which carries the same `custom_data`, and the webhook fills in the Organisation's billing fields.
+
+**Checked:** the script's GBP totals match the brief for 26, 100, 300 and 1,000 people, annual and monthly. Paddle previews for the UK, US and Germany use GBP, USD and EUR as expected.
+
+**Not built yet:** the block at 25, a "Billing" link in the admin side menu, showing an error message if checkout can't be created, and the daily update.
+
 ## Still to do
 
 - [HUMAN: webhook endpoint URL in the Bubble app, then create the notification setting in sandbox and test with Paddle simulations]
