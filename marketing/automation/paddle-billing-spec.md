@@ -271,6 +271,8 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
   3. **Place limit:** shown only when the organisation is paying.
 
   The refusal pop-up follows the go-live pop-up's pattern: a close icon, an icon and heading, 40px margins, an info box showing the limit (or the free 25) and the count after assignment, and Close / Go to Billing buttons built as groups styled like the admin buttons.
+- **Limit can't go below current use:** saving a place limit lower than the number of people on live content sets is refused. The organisation isn't changed, there's no "saved" message, and a pop-up ("The limit can't go that low") shows the limit entered and the current count. It tells the admin to unassign people first, with Close and Go to Content sets buttons. An empty limit (no limit) can always be saved.
+- **Paid places tile:** shows billed places minus the free 25 (never below 0), with "N in total, first 25 free" underneath. Paddle already charges only places 26 and up, so this is display only.
 - **Known gap:** a refused go-live still shows no message. The cost preview and admin emails aren't built yet.
 - Savepoints: `1795793642810` (before wording and limit).
 
