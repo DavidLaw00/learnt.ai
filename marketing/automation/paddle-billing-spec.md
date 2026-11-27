@@ -58,14 +58,87 @@ Places in each band:
 
 **When `n` = 25 or fewer:** no Paddle subscription. The organisation is created in Paddle only when it first needs to pay.
 
-## Currencies
+## Currencies: local pricing strategy
 
-- Base prices are in GBP. **Automatic currency conversion is switched on for all 33 Paddle currencies** (sandbox, 27 November 2026). Paddle converts the GBP price at its current exchange rate, based on the buyer's location.
-- Example (sandbox preview, one place in band 26–250, annual, before tax): United States $63.03, Germany €57.48. These move with exchange rates.
-- Converted prices are not rounded to "nice" numbers. [HUMAN: decide whether any markets get fixed local prices (Paddle "price overrides" by country, for example $60 or €55 per place). The brief only sets GBP prices, so any other fixed price needs a human decision and a brief update.]
-- Monthly non-catalogue prices are converted the same way, because they are created in GBP.
-- To show local prices on the Bubble site, the app asks Paddle for a pricing preview with the visitor's country (Paddle.js `PricePreview`, or `pricing-preview` from the back end).
-- [HUMAN: the Paddle balance and payouts are in USD in the sandbox. Confirm which currency Learnt.ai wants payouts in on the live account (GBP, for example).]
+Asked for by David Law, 27 November 2026: rounded local prices in every currency, on the same principle as the UK.
+
+### The rule (same in every currency)
+
+1. **Headline:** a round local "per person a month, paid annually" figure, the equivalent of the UK's £4. It's set from Paddle's exchange rate for £4 (27 November 2026), rounded to a natural price point (5, 7.50, 10, 35, 500, 800, and so on). If that would be more than 8% away from the exchange rate, it's rounded to two significant figures instead (for example 1,800 or 17).
+2. **Annual band prices** keep the UK ratios exactly:
+   - places 26–250: headline × 12 (UK £48)
+   - places 251–500: 87.5% of band 1 (UK £42)
+   - places 501–1,000: 75% of band 1 (UK £36)
+3. **The same rules everywhere:**
+   - the first 25 places are free
+   - each rate applies only to the places in its band
+   - monthly payment is 25% above the annual monthly equivalent, so paying annually saves 20%
+   - monthly totals are rounded to the currency's smallest unit
+   - over 1,000 is a custom price.
+4. **Review** the table every six months, or sooner if an exchange rate moves more than 15% from the rate used here. Existing subscriptions keep their price until renewal.
+
+### Price table (annual, per place per year, excluding tax)
+
+The last column shows how far band 1 is from a straight currency conversion of £48.
+
+| Currency | Headline a month | 26–250 | 251–500 | 501–1,000 | vs exchange rate |
+|---|---|---|---|---|---|
+| GBP (base) | 4.00 | 48.00 | 42.00 | 36.00 | — |
+| USD | 5.00 | 60.00 | 52.50 | 45.00 | −4.8% |
+| EUR | 5.00 | 60.00 | 52.50 | 45.00 | +4.4% |
+| AUD | 8.00 | 96.00 | 84.00 | 72.00 | +1.6% |
+| CAD | 7.50 | 90.00 | 78.75 | 67.50 | +0.2% |
+| NZD | 10.00 | 120.00 | 105.00 | 90.00 | +4.4% |
+| CHF | 4.50 | 54.00 | 47.25 | 40.50 | +2.7% |
+| SEK | 50.00 | 600.00 | 525.00 | 450.00 | −6.8% |
+| NOK | 50.00 | 600.00 | 525.00 | 450.00 | −2.2% |
+| DKK | 35.00 | 420.00 | 367.50 | 315.00 | −2.2% |
+| PLN | 20.00 | 240.00 | 210.00 | 180.00 | −6.6% |
+| CZK | 120.00 | 1,440.00 | 1,260.00 | 1,080.00 | +2.5% |
+| HUF | 1,800.00 | 21,600.00 | 18,900.00 | 16,200.00 | +1.5% |
+| UAH | 250.00 | 3,000.00 | 2,625.00 | 2,250.00 | +5.6% |
+| ILS | 17.00 | 204.00 | 178.50 | 153.00 | −2.3% |
+| ZAR | 90.00 | 1,080.00 | 945.00 | 810.00 | −1.1% |
+| INR | 500.00 | 6,000.00 | 5,250.00 | 4,500.00 | +2.5% |
+| SGD | 7.00 | 84.00 | 73.50 | 63.00 | +3.3% |
+| HKD | 40.00 | 480.00 | 420.00 | 360.00 | −2.7% |
+| CNY | 35.00 | 420.00 | 367.50 | 315.00 | +0.1% |
+| TWD | 170.00 | 2,040.00 | 1,785.00 | 1,530.00 | −1.9% |
+| THB | 180.00 | 2,160.00 | 1,890.00 | 1,620.00 | +1.0% |
+| JPY | 800 | 9,600 | 8,400 | 7,200 | −4.5% |
+| KRW | 7,000 | 84,000 | 73,500 | 63,000 | −0.2% |
+| VND | 125,000 | 1,500,000 | 1,312,500 | 1,125,000 | −7.9% |
+| BRL | 30.00 | 360.00 | 315.00 | 270.00 | +2.0% |
+| MXN | 100.00 | 1,200.00 | 1,050.00 | 900.00 | −2.5% |
+| CLP | 5,400 | 64,800 | 56,700 | 48,600 | −0.8% |
+| COP | 20,000.00 | 240,000.00 | 210,000.00 | 180,000.00 | +7.1% |
+| PEN | 18.00 | 216.00 | 189.00 | 162.00 | −1.1% |
+
+**Left on automatic conversion:**
+- ARS and TRY, because high inflation would make fixed prices out of date within weeks. [HUMAN: confirm.]
+- RUB, because Paddle doesn't sell to any country in RUB.
+
+### How it's set up in Paddle (sandbox, 27 November 2026)
+
+- Each annual band price carries **country price overrides** for the 29 currencies above. Paddle assigns each country to its currency; for example, 127 countries use USD and 47 use EUR. Automatic conversion stays switched on as the fallback for ARS and TRY.
+- Checked by preview:
+  - US: $60.00 / $52.50 / $45.00
+  - Germany: €60.00 / €52.50 / €45.00
+  - Japan: ¥9,600 / ¥8,400 / ¥7,200
+  - Australia: A$96 / A$84 / A$72
+  - India: ₹6,000 / ₹5,250 / ₹4,500
+  - UK: £48 / £42 / £36
+- **Monthly (non-catalogue price):** the app creates the price in the organisation's own currency, using:
+  - total = `round(band1 × B1 × 1.25 / 12 + band2 × B2 × 1.25 / 12 + band3 × B3 × 1.25 / 12)`, to the currency's smallest unit
+  - B1, B2 and B3 are that currency's annual band prices from the table.
+
+  Example: 300 people in USD = 225 × $6.25 + 50 × $5.46875 = $1,679.69 a month.
+- **A subscription's currency is fixed** when it's created. If an organisation moves country, it keeps its currency until someone changes it by hand.
+- **Showing prices on the Bubble site:** ask Paddle for a pricing preview with the visitor's country (Paddle.js `PricePreview`, or `pricing-preview` from the back end). It returns these local prices.
+
+[HUMAN: the brief only states GBP prices. Add the local headline figures to `docs/embed-brief.md` before any marketing copy quotes a non-GBP price.]
+
+[HUMAN: the Paddle balance and payouts are in USD in the sandbox. Confirm which currency Learnt.ai wants payouts in on the live account (GBP, for example).]
 
 ## Checked totals (sandbox previews, GB address, 27 November 2026)
 
