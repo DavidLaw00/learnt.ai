@@ -231,11 +231,13 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 - "Talk to us about a custom price", over 1,000.
 
 **What the buttons do:**
-1. A Toolbox **Server script** (on Bubble's server) builds the Paddle transaction. Places start at max(count, 26), split into bands, with lines named by band, local prices for 29 currencies as country overrides, and `custom_data` holding `org_id`, `billable_people` and `cycle`. The checkout URL is the site's own `/pay` page.
+1. A Toolbox **Server script** (on Bubble's server) builds the Paddle transaction. Places start at max(count, 26), split into bands, with lines named by band, local prices for 29 currencies as country overrides, and `custom_data` holding `org_id`, `billable_people` and `cycle`. No checkout URL is sent. Paddle's default payment link (sandbox: `https://learnt.ai/version-13psj/pay`) is only a fallback.
 2. API Connector `create_transaction` (POST `/transactions`) sends it to Paddle.
-3. The admin is sent to Paddle's checkout link. After payment, Paddle creates the subscription, which carries the same `custom_data`, and the webhook fills in the Organisation's billing fields.
+3. Paddle's **overlay checkout** opens on top of the billing page: Paddle.js is in the page header, and a Toolbox "Run javascript" step calls `Paddle.Checkout.open({transactionId})`. When payment completes, the page reloads after 4 seconds to show the plan. After payment, Paddle creates the subscription, which carries the same `custom_data`, and the webhook fills in the Organisation's billing fields.
 
 **Checked:** the script's GBP totals match the brief for 26, 100, 300 and 1,000 people, annual and monthly. Paddle previews for the UK, US and Germany use GBP, USD and EUR as expected.
+
+**Lesson (Toolbox Server script):** dynamic values inserted into the script text make it fail, and so does "Website home URL" as an input. Keep the script text fixed and pass live values through its key/value inputs, which the script reads as `properties.keyvaluesobj`.
 
 **Not built yet:** the block at 25, a "Billing" link in the admin side menu, showing an error message if checkout can't be created, and the daily update.
 
