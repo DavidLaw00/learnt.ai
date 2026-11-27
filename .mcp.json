@@ -1,13 +1,10 @@
 {
   "mcpServers": {
-    "paddle": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@paddle/paddle-mcp@0.1.6"],
-      "env": {
-        "PADDLE_API_KEY": "${PADDLE_API_KEY:-injected-by-network-proxy}",
-        "PADDLE_ENVIRONMENT": "${PADDLE_ENVIRONMENT:-sandbox}",
-        "PADDLE_MCP_TOOLS": "${PADDLE_MCP_TOOLS:-non-destructive}"
+    "paddle-sandbox": {
+      "type": "http",
+      "url": "https://sandbox-mcp.paddle.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${PADDLE_SANDBOX_API_KEY:-injected-by-network-proxy}"
       }
     }
   }
