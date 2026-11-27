@@ -264,7 +264,8 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
   - `wf_assign_content_set_to_user` (manual) and `9A wf_upsert_live_content_set_assignment` (automatic audiences) run only if the content set isn't live, **or** the person is already billable, **or** the organisation is paying and under any limit, **or** the organisation has fewer than 25 billable people.
   - `1. wf_go_live_content_set` runs only if everyone the set would make billable still fits: within 25 if not paying, within the limit if paying.
 - People held back from automatic audiences are retried by the daily audience sync, so they're added once the limit is raised.
-- **Known gap:** when go-live or an assignment is refused, nothing tells the admin yet. The cost preview on the content set page will explain it (next). Admin emails aren't built yet.
+- **Assignment refusal (content set page):** clicking Assign first works out how many billable people there would be afterwards (page state `limit_after_count`). If it's allowed, the assignments and the "updated" message run as before. If not, nothing is assigned, there's no alert, and a pop-up ("Nobody has been assigned") explains why and has Close and Go to Billing buttons. The pop-up says one of two things: the place limit has been reached (with the limit and the new count), or the organisation isn't paying and has gone over the free 25. The backend gate still refuses anything that gets past the page.
+- **Known gap:** a refused go-live still shows no message. The cost preview and admin emails aren't built yet.
 - Savepoints: `1795793642810` (before wording and limit).
 
 ## Still to do
