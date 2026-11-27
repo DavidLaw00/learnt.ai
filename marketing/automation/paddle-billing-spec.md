@@ -255,6 +255,18 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 
 **Build order:** checkout wording → place limit and block at 25 → daily update → cost preview on the content set page → emails.
 
+
+### Built so far (paddle-test branch, 27 November 2026)
+
+- **Consent wording** is on the billing page above the pay buttons.
+- **Place limit:** new Organisation field `billing_place_limit`. Paying admins see a "Place limit (optional)" box on the billing page. Empty means no limit.
+- **Enforcement:** a check at the start of three backend workflows:
+  - `wf_assign_content_set_to_user` (manual) and `9A wf_upsert_live_content_set_assignment` (automatic audiences) run only if the content set isn't live, **or** the person is already billable, **or** the organisation is paying and under any limit, **or** the organisation has fewer than 25 billable people.
+  - `1. wf_go_live_content_set` runs only if everyone the set would make billable still fits: within 25 if not paying, within the limit if paying.
+- People held back from automatic audiences are retried by the daily audience sync, so they're added once the limit is raised.
+- **Known gap:** when go-live or an assignment is refused, nothing tells the admin yet. The cost preview on the content set page will explain it (next). Admin emails aren't built yet.
+- Savepoints: `1795793642810` (before wording and limit).
+
 ## Still to do
 
 - [HUMAN: webhook endpoint URL in the Bubble app, then create the notification setting in sandbox and test with Paddle simulations]
