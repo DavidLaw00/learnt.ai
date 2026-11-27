@@ -265,6 +265,12 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
   - `1. wf_go_live_content_set` runs only if everyone the set would make billable still fits: within 25 if not paying, within the limit if paying.
 - People held back from automatic audiences are retried by the daily audience sync, so they're added once the limit is raised.
 - **Assignment refusal (content set page):** clicking Assign first works out how many billable people there would be afterwards (page state `limit_after_count`). If it's allowed, the assignments and the "updated" message run as before. If not, nothing is assigned, there's no alert, and a pop-up ("Nobody has been assigned") explains why and has Close and Go to Billing buttons. The pop-up says one of two things: the place limit has been reached (with the limit and the new count), or the organisation isn't paying and has gone over the free 25. The backend gate still refuses anything that gets past the page.
+- **Design pass (matches the admin pages):** the Billing page now uses the admin card style: a rounded card with a border and a soft shadow, a 14px bold card title and 12px body text in the primary colour. It has three cards:
+  1. **An overview (an HTML element)** showing the number of places in use, a meter (the first 25 free shown striped, the place limit marked in orange), plan tiles (places billed, billing cycle, next payment, currency) and a three-step "How billing works" section. Colours come from the app's colour tokens, motion is turned off when the browser asks for reduced motion, and below 820px it drops to two columns.
+  2. **Add more people:** shown only when the organisation isn't paying.
+  3. **Place limit:** shown only when the organisation is paying.
+
+  The refusal pop-up follows the go-live pop-up's pattern: a close icon, an icon and heading, 40px margins, an info box showing the limit (or the free 25) and the count after assignment, and Close / Go to Billing buttons built as groups styled like the admin buttons.
 - **Known gap:** a refused go-live still shows no message. The cost preview and admin emails aren't built yet.
 - Savepoints: `1795793642810` (before wording and limit).
 
