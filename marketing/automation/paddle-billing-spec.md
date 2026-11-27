@@ -63,7 +63,14 @@ Places in each band:
 - Show only the bands that have places in them, and always show the free line.
 - In GBP the total is identical to rounding the whole total, because only the 251–500 line can have a half penny. In other currencies, rounding each line can differ from the whole-total rounding by one smallest unit at most.
 - Checked in a sandbox preview (27 November 2026): £1,343.75 + £268.75 UK VAT = £1,612.50.
-- When the number of people changes, the app replaces the lines with the new set.
+- When the number of people changes, the app replaces **only the lines whose amount changed**. An unchanged line keeps its price ID, so the pro-rata bill and email show only what actually changed.
+- **Put the breakdown in the product name, not the price name.** Paddle's receipt emails show the product name and the billing cycle ("Monthly"), not the price name. Each line therefore uses a non-catalogue product named, for example, "Embed: places 26 to 250 (225 × £5.00)", with the price name "Monthly". Emails show amounts including tax.
+
+### Sandbox test results (27 November 2026)
+
+- 300 people, monthly: checkout paid with Paddle's test card on the Bubble `paddle-test` branch page (`/pay`). Paddle charged £1,343.75 + £268.75 VAT = £1,612.50 and created an active monthly subscription with the three lines and `org_id` in its custom data. The next renewal is 27 December 2026.
+- Lesson: the first receipt email showed "Embed / Monthly" on every line, so the breakdown wasn't visible. Fixed by using product names as described above.
+- Increase from 300 to 320 people on day 1: Paddle charged £87.49 + £17.50 VAT = £104.99 pro rata straight away. The next renewal is £1,431.25 + £286.25 VAT = £1,717.50.
 
 **When `n` = 25 or fewer:** no Paddle subscription. The organisation is created in Paddle only when it first needs to pay.
 
