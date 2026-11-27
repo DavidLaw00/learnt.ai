@@ -184,6 +184,39 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 3. **Webhooks:** listen for `subscription.created`, `subscription.updated`, `subscription.canceled`, `transaction.completed` and `transaction.payment_failed`, and store the subscription status on the organisation.
 4. **Billing self-service:** use Paddle's customer portal (one portal session per request) for invoices, payment method and cancellation.
 
+## Webhook (built and tested on Bubble branch `paddle-test`, 27 November 2026)
+
+**Where:** Bubble app `learntai`, branch `paddle-test` (version `13psj`), backend workflow `paddle_webhook`. Sandbox URL: `https://learnt.ai/version-13psj/api/1.1/wf/paddle_webhook`. Paddle sandbox notification destination `ntfset_01m8egspqwjah2dxxcmvrxmzbj`.
+
+**Events sent:** `subscription.created`, `.updated`, `.activated`, `.canceled`, `.past_due`, `.paused`, `.resumed`, `transaction.completed` and `transaction.payment_failed`. Only `subscription.*` events change data. The others are logged only.
+
+**Security: verify by fetching back.** Bubble can't check Paddle's signature. So the workflow uses only the `notification_id` it receives, then fetches that notification from Paddle's API using a private sandbox API key, held in the Bubble API Connector collection "Paddle Billing (sandbox)". Only data returned by Paddle is trusted. Tested: a forged "cancelled" call with a made-up notification ID failed at the Paddle lookup and changed nothing.
+
+**Steps:**
+1. Log the event (`Embed_PaddleEvent`: event ID, type, notification ID, processed = no).
+2. Stop if it isn't a `subscription.*` event.
+3. Stop if this event ID has already been processed. Paddle retries, so the same event can arrive twice.
+4. Fetch the notification from Paddle (`get_notification`).
+5. Stop if no Organisation matches `custom_data.org_id` (the Organisation's unique ID).
+6. Update the Organisation, but only if this event is newer than `billing_synced_at`, because events can arrive out of order. Fields updated:
+   - `paddle_customer_id`, `paddle_subscription_id`
+   - `billing_status` (active / past_due / paused / canceled)
+   - `billing_cycle` (month / year), `billing_currency`
+   - `billed_places` (from `custom_data.billable_people`)
+   - `billing_next_billed_at`, `billing_period_ends_at`, `billing_scheduled_change`
+   - `billing_synced_at`.
+7. Mark the log row processed and link it to the Organisation.
+
+**Privacy:** `Embed_PaddleEvent` is visible only to Embed owners. Organisation admins can see their own organisation's billing fields through the existing "Admin — own organisation" rule. Members can't see them.
+
+**Tested end to end (27 November 2026):** changing the sandbox subscription's `org_id` to a test Organisation produced a `subscription.updated` event. The workflow filled in all the billing fields: active, month, GBP, 320, next bill 27 December 2026.
+
+**Known gaps:**
+- `billing_scheduled_change` was typed as text when the call was set up, because the sample had no scheduled change. Re-initialise `get_notification` with an event that has one (for example a cancellation scheduled for the end of the period) so Bubble learns its fields.
+- The checkout flow must put the Organisation's unique ID in `custom_data.org_id` and the billable count in `custom_data.billable_people` on every subscription it creates or updates.
+- [HUMAN: before going live, create a live API key with minimum permissions (Notifications read, Subscriptions read and write, Customers read and write, Transactions read and write), a live collection or a switch in Bubble, and a live notification destination pointing at the live app URL.]
+- [HUMAN: delete the test Organisation "Paddle Sandbox Test Organisation (delete after testing)" from the development database once testing is finished.]
+
 ## Still to do
 
 - [HUMAN: webhook endpoint URL in the Bubble app, then create the notification setting in sandbox and test with Paddle simulations]
