@@ -50,11 +50,20 @@ Places in each band:
 
 **Annual:** one subscription item per band with a quantity above 0, each using that band's price ID above. Drop an item when its band quantity reaches 0.
 
-**Monthly:** one item, quantity 1, with a non-catalogue price:
+**Monthly:** itemised by band, so checkout and invoices show how the total is made up. Each line is quantity 1 with a non-catalogue price (billing cycle monthly, tax mode `external`, product Embed):
 
-- amount (pence) = `round(band1 × 500 + band2 × 437.5 + band3 × 375)`
-- billing cycle: monthly; tax mode: `external`; product: the Embed product
-- name, for invoices: "N paid places, monthly"
+| Line name shown to the customer (300 people, GBP) | Amount |
+|---|---|
+| Places 1 to 25: free | £0.00 |
+| Places 26 to 250: 225 at £5.00 a month | £1,125.00 |
+| Places 251 to 300: 50 at £4.375 a month | £218.75 |
+| **Subtotal** | **£1,343.75** |
+
+- Each line amount = places in band × monthly band price, rounded to the smallest currency unit.
+- Show only the bands that have places in them, and always show the free line.
+- In GBP the total is identical to rounding the whole total, because only the 251–500 line can have a half penny. In other currencies, rounding each line can differ from the whole-total rounding by one smallest unit at most.
+- Checked in a sandbox preview (27 November 2026): £1,343.75 + £268.75 UK VAT = £1,612.50.
+- When the number of people changes, the app replaces the lines with the new set.
 
 **When `n` = 25 or fewer:** no Paddle subscription. The organisation is created in Paddle only when it first needs to pay.
 
