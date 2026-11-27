@@ -241,6 +241,20 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 
 **Not built yet:** the block at 25, a "Billing" link in the admin side menu, showing an error message if checkout can't be created, and the daily update.
 
+## Approving increases: user experience (decided by David Law, 27 November 2026)
+
+**Principle:** the admin consents once at checkout and sees the cost at the moment it changes. There's no approval step for each increase.
+
+1. **Consent at checkout.** The billing page states, above the pay buttons: "You pay for each person on a live content set beyond the first 25. When you add people, we charge the difference straight away for the rest of your billing period. When you remove people, your bill goes down at your next renewal."
+2. **Increases are charged straight away, on both monthly and annual plans** (pro rata), by the daily update.
+3. **Place limit (optional, off by default).** On the billing page an admin can set a maximum number of billable places. When it's set and an assignment would exceed it, the new people are not activated, and admins are emailed to raise the limit. When it's empty, there's no limit.
+4. **Organisations not yet paying** are blocked at 25 billable people until checkout is complete. Once paying, only the place limit (if set) blocks.
+5. **Cost preview on the content set page.** When an admin assigns a content set or makes it live, show "This adds N billable people: about £X now, then £Y a month (or year)" before they confirm. People already counted aren't counted again. Not on the user management page, because the number of users makes no difference to the price: only people on live content sets count.
+6. **Emails.** Paddle sends a receipt for every charge. The app also emails admins when the number of billed places changes. [Not built yet.]
+7. **Daily update:** one update a day, so small additions don't become many tiny charges.
+
+**Build order:** checkout wording → place limit and block at 25 → daily update → cost preview on the content set page → emails.
+
 ## Still to do
 
 - [HUMAN: webhook endpoint URL in the Bubble app, then create the notification setting in sandbox and test with Paddle simulations]
