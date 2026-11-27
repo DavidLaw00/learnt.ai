@@ -125,6 +125,15 @@ Shared files:
 
 `docs/team-playbook.md` sets out the launch phases and which teammates run in each.
 
+## Bubble app and Paddle billing work
+
+This is separate from the marketing team's drafting work (Rule 3 still applies to marketing). For the Bubble app `learntai` and Paddle billing:
+
+- **Savepoint first.** Before each major change to the Bubble app (a new page, workflow, data type, API connection, or a batch of edits), create a Bubble savepoint on the branch being changed, with a message that says what is about to change. Tell the user its timestamp so it can be restored.
+- **Branches, not live.** Work on a development branch (currently `paddle-test`), never on Main or live, unless the user names one.
+- **Sandbox, not live.** Paddle work happens in the sandbox. Anything in the live Paddle account, and any deploy to live, is switched on by a human.
+- The billing design and its decisions are in `marketing/automation/paddle-billing-spec.md`.
+
 ## House style, in short
 
 The brief's "Vision", "Our story", "Hopes and fears", "Voice and style", "Guardrails" and "Names, links and company details" sections are the full rules. The ones most often missed:
