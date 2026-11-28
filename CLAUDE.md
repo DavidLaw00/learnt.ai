@@ -133,6 +133,7 @@ This is separate from the marketing team's drafting work (Rule 3 still applies t
 - **Branches, not live.** Work on a development branch (currently `paddle-test`), never on Main or live, unless the user names one.
 - **Sandbox, not live.** Paddle work happens in the sandbox. Anything in the live Paddle account, and any deploy to live, is switched on by a human.
 - The billing design and its decisions are in `marketing/automation/paddle-billing-spec.md`.
+- **Name savepoints and keep the change log.** Name each savepoint `SP-NNN · Before: <what is about to change> · <branch>`, numbering on from the last entry in `marketing/automation/bubble-changelog.md`. After the change, add an entry at the top of that log with: the name, branch, time (UTC), timestamp, what changed (pages, elements, workflows, fields), and what restoring it would undo. Commit the log with the work.
 
 ## House style, in short
 
