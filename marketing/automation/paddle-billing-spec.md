@@ -288,6 +288,22 @@ The price name carries the count, for example "Monthly (5 places)". Amounts are 
 - **Manage billing:** the "Payments and invoices" card on the Billing page creates a Paddle customer portal session (`create_portal_session`) each time it's clicked and opens the portal's overview link in the same tab. Paddle handles the payment card, invoices, receipts, payment history and cancellation. A cancellation made in the portal comes back through the webhook like any other.
 - **Upgrade prompt at 26:** if an organisation isn't paying and an assignment would take it past 25, the pop-up asks the admin to choose a plan. The buttons are "Not now" and "Choose a plan", and "Choose a plan" goes to the Billing page. Nobody is assigned, so the admin assigns them again once the plan is active.
 
+## In-app billing (built on `paddle-test`, 28 November 2026)
+
+David Law asked for billing to feel part of Embed rather than a Paddle site. The "Payments and invoices" card on the Billing page now covers:
+- **Invoices:** the list loads when the page opens, from Paddle's completed, billed and past-due transactions for the subscription. Each row has the date, invoice number and amount. "Download" fetches a short-lived PDF link from Paddle when clicked. For JPY, KRW, VND and CLP, which have no minor unit, the amount is shown without dividing by 100.
+- **Update payment card:** opens Paddle's card form over the page, using the subscription's update-payment-method transaction.
+- **Cancel plan:** a confirmation pop-up first. It cancels at the end of the period, and a notice then shows the end date with a "Keep my plan" button, which removes the scheduled cancellation.
+- **More billing options:** Paddle's customer portal, kept as a fallback.
+
+Paddle's name still appears on invoices, receipts and card statements, because Paddle is the merchant of record. The page says so.
+
+**Cancellations and the daily sync:** the sync only removes a cancellation it made itself, when the count dropped to 25 or fewer (`billing_auto_cancelled`). A cancellation the admin made, in the app or in Paddle's portal, is left alone (`SKIP:cancel_requested`), and no increases are charged while it's pending.
+
+**Open points:**
+- [HUMAN: decide what happens to people above 25 after a paid plan ends. The gates stop new assignments above 25, but people already assigned stay active.]
+- A cancellation made in Paddle's portal doesn't set `billing_cancel_requested`, so the page won't show the "ends on" notice. Using the in-app button avoids this.
+
 ## Approving increases: user experience (decided by David Law, 27 November 2026)
 
 **Principle:** the admin consents once at checkout and sees the cost at the moment it changes. There's no approval step for each increase.

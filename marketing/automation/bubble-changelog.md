@@ -21,6 +21,31 @@ Savepoints SP-001 to SP-007 were made before this naming rule existed, so Bubble
 
 ---
 
+## SP-010 · Before: in-app billing (invoices, card, cancel)
+
+- **Bubble name:** "SP-010 · Before: in-app billing (invoices list, update card, cancel and keep plan) · paddle-test"
+- **Branch:** paddle-test (`13psj`) · **Time:** 28 Nov 2026 10:25 UTC · **Timestamp:** 1795861514592
+- **Changed after it:**
+  - **API Connector, three new calls:**
+    - `list_transactions` (completed, billed and past-due payments for the subscription)
+    - `get_invoice_pdf` (a short-lived download link for one invoice)
+    - `get_update_card_transaction` (the transaction Paddle needs to change the card).
+  - **Organisation fields:**
+    - `billing_cancel_requested`: the admin cancelled.
+    - `billing_auto_cancelled`: the daily sync cancelled because the organisation dropped to 25 or fewer.
+  - **Billing page, "Payments and invoices" card:**
+    - new wording explaining that Paddle is the payment provider and reseller
+    - an "Update payment card" button, which opens Paddle's card form over the page
+    - a "Cancel plan" button, which opens a confirmation pop-up
+    - "Keep my plan" and a notice showing the end date, while a cancellation is pending
+    - an invoice list loaded when the page opens (date, invoice number, amount, Download), with a message when there are no payments yet
+    - the portal button relabelled "More billing options" and restyled as a secondary button.
+  - **Cancel pop-up (Popup B)**, built in the admin style. "Cancel plan" schedules the cancellation at the end of the period. "Keep my plan" (in the pop-up, and on the page while a cancellation is pending) removes it.
+  - **Daily sync:**
+    - It passes `billing_auto_cancelled` to the script, which leaves any cancellation it didn't make itself alone (`SKIP:cancel_requested`).
+    - It sets `billing_auto_cancelled` to yes when it cancels, and back to no when it removes its own cancellation.
+- **Restoring it undoes:** the in-app invoices, card update and cancellation, and the sync's cancellation safeguard. Also everything in later entries.
+
 ## SP-009 · Before: Manage billing and the upgrade pop-up
 
 - **Bubble name:** "SP-009 · Before: Manage billing (Paddle customer portal) and upgrade pop-up at 26 people · paddle-test"
