@@ -21,6 +21,22 @@ Savepoints SP-001 to SP-007 were made before this naming rule existed, so Bubble
 
 ---
 
+## SP-009 · Before: Manage billing and the upgrade pop-up
+
+- **Bubble name:** "SP-009 · Before: Manage billing (Paddle customer portal) and upgrade pop-up at 26 people · paddle-test"
+- **Branch:** paddle-test (`13psj`) · **Time:** 28 Nov 2026 09:53 UTC · **Timestamp:** 1795859599060
+- **Changed after it:**
+  - **API Connector:** new call `create_portal_session`: POST /customers/{id}/portal-sessions with the subscription ID. It returns a short-lived link to Paddle's customer portal.
+  - **Billing page:** a new card, "Payments and invoices", shown once the organisation has a Paddle customer ID. Its "Manage billing and invoices" button creates a portal session and opens Paddle's portal, where the admin can update their card, download invoices and receipts, see payment history or cancel.
+  - **Content set page, refusal pop-up:** when the organisation isn't paying and an assignment would take it past 25, the pop-up becomes an upgrade prompt:
+    - title "Add more people with a paid plan" and a rocket icon
+    - a message explaining that the first 25 are free, that you pay only for people beyond 25, and that a place limit can keep spend under control
+    - the box shows free places, the count after this assignment, and the paid places
+    - buttons "Not now" and "Choose a plan" (which goes to Billing).
+
+    The wording when the place limit is reached is unchanged.
+- **Restoring it undoes:** the portal button, the API call, and the upgrade wording, so the plain refusal message comes back. Also everything in later entries.
+
 ## SP-008 · Before: daily Paddle sync
 
 - **Bubble name:** "SP-008 · Before: daily Paddle sync (API calls, sync workflow, recurring event, Organisation fields) · paddle-test"

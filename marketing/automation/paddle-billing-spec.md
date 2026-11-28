@@ -283,6 +283,11 @@ The price name carries the count, for example "Monthly (5 places)". Amounts are 
 
 **Not covered yet:** a failed immediate charge on an increase. Paddle's default `on_payment_failure: prevent_change` leaves the subscription unchanged, the workflow stops on the error, and the next day's run tries again. A message to the admin is part of the failed-payment work.
 
+## Manage billing and the upgrade prompt (built on `paddle-test`, 28 November 2026)
+
+- **Manage billing:** the "Payments and invoices" card on the Billing page creates a Paddle customer portal session (`create_portal_session`) each time it's clicked and opens the portal's overview link in the same tab. Paddle handles the payment card, invoices, receipts, payment history and cancellation. A cancellation made in the portal comes back through the webhook like any other.
+- **Upgrade prompt at 26:** if an organisation isn't paying and an assignment would take it past 25, the pop-up asks the admin to choose a plan. The buttons are "Not now" and "Choose a plan", and "Choose a plan" goes to the Billing page. Nobody is assigned, so the admin assigns them again once the plan is active.
+
 ## Approving increases: user experience (decided by David Law, 27 November 2026)
 
 **Principle:** the admin consents once at checkout and sees the cost at the moment it changes. There's no approval step for each increase.
