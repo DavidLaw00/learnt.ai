@@ -24,7 +24,7 @@ Savepoints SP-001 to SP-007 were made before this naming rule existed, so Bubble
 ## SP-008 · Before: daily Paddle sync
 
 - **Bubble name:** "SP-008 · Before: daily Paddle sync (API calls, sync workflow, recurring event, Organisation fields) · paddle-test"
-- **Branch:** paddle-test (`13psj`) · **Time:** 28 Nov 2026 07:07 UTC · **Timestamp:** 1795856870583
+- **Branch:** paddle-test (`13psj`) · **Time:** 28 Nov 2026 09:07 UTC · **Timestamp:** 1795856870583
 - **Changed after it:**
   - **API Connector** (collection "Paddle Billing (sandbox)"), three new calls, all returning raw text:
     - `get_subscription_raw`: GET /subscriptions/{id}.
