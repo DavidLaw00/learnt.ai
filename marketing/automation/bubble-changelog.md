@@ -21,6 +21,22 @@ Savepoints SP-001 to SP-007 were made before this naming rule existed, so Bubble
 
 ---
 
+## SP-011 · Before: restyling the Payments and invoices card
+
+- **Bubble name:** "SP-011 · Before: restyling Payments and invoices card to match the Billing page · paddle-test"
+- **Branch:** paddle-test (`13psj`) · **Time:** 28 Nov 2026 19:51 UTC · **Timestamp:** 1795895503739
+- **Changed after it:**
+  - Text styling put back on the Payments and invoices card and the cancel pop-up. The "Body" style had overridden the colours and weights set when the elements were created.
+    - Card titles are now 14px semi-bold in the primary colour, matching "Place limit" and "Add more people". Body text is 12px in the primary colour.
+    - Button labels are 12px bold.
+  - Invoice list:
+    - Column headings DATE / INVOICE / AMOUNT, hidden when there are no invoices.
+    - The date is semi-bold.
+    - The invoice number is muted.
+    - The amount always shows two decimal places, for example "GBP 6.00".
+    - Download is a small outlined pill.
+- **Restoring it undoes:** the styling only.
+
 ## SP-010 · Before: in-app billing (invoices, card, cancel)
 
 - **Bubble name:** "SP-010 · Before: in-app billing (invoices list, update card, cancel and keep plan) · paddle-test"
