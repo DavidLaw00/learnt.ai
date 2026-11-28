@@ -21,6 +21,33 @@ Savepoints SP-001 to SP-007 were made before this naming rule existed, so Bubble
 
 ---
 
+## SP-008 · Before: daily Paddle sync
+
+- **Bubble name:** "SP-008 · Before: daily Paddle sync (API calls, sync workflow, recurring event, Organisation fields) · paddle-test"
+- **Branch:** paddle-test (`13psj`) · **Time:** 28 Nov 2026 07:07 UTC · **Timestamp:** 1795856870583
+- **Changed after it:**
+  - **API Connector** (collection "Paddle Billing (sandbox)"), three new calls, all returning raw text:
+    - `get_subscription_raw`: GET /subscriptions/{id}.
+    - `update_subscription`: PATCH /subscriptions/{id}; the body is a parameter.
+    - `cancel_subscription_at_period_end`: POST /subscriptions/{id}/cancel with `effective_from: next_billing_period`.
+  - **Organisation fields:** `billing_sync_scheduled` (yes/no), `billing_sync_result` (text), `billing_sync_checked_at` (date).
+  - **Backend workflow `billing_sync_org`** (parameter: org). Steps:
+    1. Fetch the subscription from Paddle.
+    2. A server script compares the live billable count with what's billed and returns NONE, CANCEL, SKIP or ERROR, or an update body.
+    3. If it returned an update body, send it to Paddle.
+    4. If it returned CANCEL, schedule the cancellation at the end of the period.
+    5. Record the result and the time on the Organisation.
+  - **Recurring event `billing_daily_sync`** (on Organisation): runs `billing_sync_org` every day.
+  - **`paddle_webhook`:** two new steps after "Make changes to Organisation". The first time an active subscription event arrives for an organisation, they start the daily schedule at 03:00 UTC the next day and set `billing_sync_scheduled` to yes.
+  - **Billing page:** an owner-only link, "sync this organisation with Paddle now", that runs `billing_sync_org` immediately (for testing and support).
+- **Outside Bubble (Paddle sandbox):** three band products were created for the sync's line items:
+  - `pro_01m8gpgqy6z188ck3ppvjj4ajy` (places 26 to 250)
+  - `pro_01m8gpgr11k18b98asy8pd2ey3` (places 251 to 500)
+  - `pro_01m8gpgr46g9nqwaprx0avcyrq` (places 501 to 1,000)
+
+  Restoring the savepoint doesn't remove them.
+- **Restoring it undoes:** the daily sync, its schedule, the fields and the three API calls. Also everything in later entries.
+
 ## SP-007 · Before: restyling pop-up buttons and info boxes
 
 - **Bubble name:** "Before restyling pop-up buttons and info boxes on content set and billing pages"

@@ -221,7 +221,7 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 
 **Decisions (David Law, 27 November 2026):**
 - **Billable person:** someone with at least one active content set assignment on a **live** content set (content set `active` = yes and `archived_at` empty). Each person counts once.
-- **Above 25:** the 26th person is blocked until the organisation has paid. [Not built yet: needs a check added to the assignment workflows.]
+- **Above 25:** the 26th person is blocked until the organisation has paid. Built as gates on the assignment and go-live workflows.
 - **Currency:** Paddle picks it from the buyer's location. The admin doesn't choose.
 
 **Page:** `embed_admin_billing`, a copy of the admin settings page, so it keeps the side menu, branding and the redirects for people who aren't logged in or aren't admins. It shows the number of people on live content sets, then one of:
@@ -239,7 +239,49 @@ Paddle added UK VAT at 20% on top for a GB buyer with no VAT number. Tax for oth
 
 **Lesson (Toolbox Server script):** dynamic values inserted into the script text make it fail, and so does "Website home URL" as an input. Keep the script text fixed and pass live values through its key/value inputs, which the script reads as `properties.keyvaluesobj`.
 
-**Not built yet:** the block at 25, a "Billing" link in the admin side menu, showing an error message if checkout can't be created, and the daily update.
+**Not built yet:** a "Billing" link in the admin side menu, and showing an error message if checkout can't be created. (The block at 25 and the daily update are now built.)
+
+## Daily sync (built on Bubble branch `paddle-test`, 28 November 2026)
+
+**Schedule:** each organisation gets a Bubble recurring event, `billing_daily_sync`, that runs once a day. The webhook starts it at 03:00 UTC the day after the first active subscription event arrives, and the flag `billing_sync_scheduled` stops it being set up twice. The event runs the backend workflow `billing_sync_org`.
+
+**What `billing_sync_org` does:**
+1. Stops if the organisation has no subscription ID.
+2. Fetches the subscription from Paddle (`get_subscription_raw`).
+3. Counts the billable people now (the same definition as everywhere else: unique people with an active assignment on a live content set).
+4. A server script decides what to do:
+
+   | Situation | Result | What is sent to Paddle |
+   |---|---|---|
+   | Subscription not active or trialing (for example, past due) | `SKIP:<status>` | Nothing |
+   | Over 1,000 people | `SKIP:over_1000` | Nothing. A custom price needs a person. |
+   | 25 or fewer, no cancellation scheduled | `CANCEL` | Cancel at the end of the period |
+   | 25 or fewer, cancellation already scheduled | `NONE` | Nothing |
+   | Same count as billed, nothing scheduled | `NONE` | Nothing |
+   | More than billed | update body | New items, `prorated_immediately`: the difference is charged now |
+   | Fewer than billed (still over 25) | update body | New items, `do_not_bill`: the lower amount applies from renewal |
+   | Back above 25 with a cancellation scheduled | update body | `scheduled_change: null` (plus new items if the count changed) |
+
+   Every update also sets `custom_data.billable_people` to the new count, so the webhook updates `billed_places`.
+5. Records the result and the time on the Organisation (`billing_sync_result`, `billing_sync_checked_at`).
+
+**Line items:** the free line keeps its existing price. A band line whose amount hasn't changed keeps its price ID, so the pro-rata charge and the email show only what changed. A changed band line becomes a new non-catalogue price on one of the fixed band products:
+
+| Band | Sandbox product |
+|---|---|
+| Places 26 to 250 | `pro_01m8gpgqy6z188ck3ppvjj4ajy` |
+| Places 251 to 500 | `pro_01m8gpgr11k18b98asy8pd2ey3` |
+| Places 501 to 1,000 | `pro_01m8gpgr46g9nqwaprx0avcyrq` |
+
+The price name carries the count, for example "Monthly (5 places)". Amounts are in the subscription's own currency, from the local price table.
+
+**Checked (Paddle preview, 28 November 2026):** Spice Ltd, monthly GBP, going from 26 to 30 people. Paddle accepted the update and would charge £19.50 + £3.91 VAT = £23.41 now: the new £25.00 line pro rata, minus the old £5.00 line pro rata. The next renewal would be £25.00 + £5.00 VAT.
+
+**Testing:** Embed owners see "Owner only: sync this organisation with Paddle now" on the Billing page. It runs the same workflow straight away.
+
+**Live:** [HUMAN: before going live, create the three band products in the live Paddle account. Then put their IDs, and the live API base URL, into the server script and the API calls.]
+
+**Not covered yet:** a failed immediate charge on an increase. Paddle's default `on_payment_failure: prevent_change` leaves the subscription unchanged, the workflow stops on the error, and the next day's run tries again. A message to the admin is part of the failed-payment work.
 
 ## Approving increases: user experience (decided by David Law, 27 November 2026)
 
